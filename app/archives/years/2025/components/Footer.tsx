@@ -19,9 +19,9 @@ export default function Footer() {
           <Image
             src="/page/1440_footer_c.png"
             alt="2025 졸업 전시 푸터 장식"
-            width={1069}
-            height={125}
-            className="h-auto w-[69%] max-w-[1069px]"
+            width={1176}
+            height={138}
+            className="h-auto w-[76%] max-w-[1176px]"
             priority
           />
         </div>
@@ -43,9 +43,9 @@ export default function Footer() {
           <Image
             src="/page/1280_footer_c.png"
             alt="2025 졸업 전시 푸터 장식 (중간 화면)"
-            width={837}
-            height={108}
-            className="h-auto w-[80%] max-w-[837px]"
+            width={921}
+            height={119}
+            className="h-auto w-[88%] max-w-[921px]"
             priority
           />
         </div>
@@ -67,9 +67,9 @@ export default function Footer() {
           <Image
             src="/page/mobile_footer_c.png"
             alt="2025 졸업 전시 푸터 장식 (모바일 600 이하)"
-            width={698}
-            height={452}
-            className="h-auto w-[78%] max-w-[698px]"
+            width={768}
+            height={497}
+            className="h-auto w-[86%] max-w-[768px]"
             priority
           />
         </div>

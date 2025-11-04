@@ -106,6 +106,7 @@
   .home-hero-container {
     max-width: 100%;
     position: relative;
+    margin-top: clamp(12px, 3vw, 32px);
   }
 
   .hero-media-wrapper {
@@ -121,10 +122,10 @@
 
   .home-hero-video-wrapper {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -10%);
-    width: 80%;
+    transform: translate(-50%, 0);
+    width: 79%;
     display: none;
     z-index: 2;
   }
@@ -147,6 +148,7 @@
       max-width: 372px;
       width: 100%;
       box-sizing: border-box;
+      margin-top: 10px;
     }
     .home-hero-video-wrapper {
       display: none;
@@ -201,11 +203,12 @@
 
   @media (min-width: 601px) and (max-width: 960px) {
     .home-hero-container {
-      max-width: 837.25px;
+      max-width: 830px;
       width: 100%;
       padding-left: 20px;
       padding-right: 20px;
       box-sizing: border-box;
+      margin-top: clamp(12px, 2.5vw, 30px);
     }
     .hero-media-wrapper picture,
     .hero-media-wrapper img {
@@ -213,7 +216,7 @@
     }
     .home-hero-video-wrapper {
       display: block;
-      transform: translate(-50%, -272%);
+      top: 0px;
     }
     .footer-tablet {
       display: block;
@@ -225,13 +228,14 @@
   @media (min-width: 961px) {
     .home-hero-container {
       max-width: 1194px;
+      margin-top: clamp(16px, 2.5vw, 36px);
     }
     .home-hero-image {
       margin-top: 0;
     }
     .home-hero-video-wrapper {
       display: block;
-      transform: translate(-50%, -247%);
+      top: 0px;
     }
     .footer-desktop {
       display: block;
