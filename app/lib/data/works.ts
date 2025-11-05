@@ -73,7 +73,7 @@ const innovationOverridesList: Array<{ name: string; title: string; professor?: 
   { name: '김지현', title: '오늘도 무사히', professor: '김한솔 교수님' },
   { name: '김지혜', title: '감정 기생충 분석기', professor: '안혜선 교수님' },
   { name: '김태희', title: '낯설고도 익숙한 레스토랑, Vescera', professor: '안혜선 교수님' },
-  { name: '김혜림', title: '()척', professor: '손우성 교수님' },
+  { name: '김혜림', title: '( )척', professor: '손우성 교수님' },
   { name: '김혜숙', title: '시선가도', professor: '서승연 교수님' },
   { name: '김혜진', title: '무정', professor: '서승연 교수님' },
   { name: '김희수', title: '베일링', professor: '안혜선 교수님' },
