@@ -1,5 +1,13 @@
 import { Designer, StudioKey } from '../types';
-import { realStudentData as studentData, instagramHandlesByName, emailByName, bioByName, interview1ByName, interview2ByName } from './student-data';
+import {
+  realStudentData as studentData,
+  instagramHandlesByName,
+  emailByName,
+  bioByName,
+  interview1ByName,
+  interview2ByName,
+  buildStudentNameKey,
+} from './student-data';
 
 // 실제 학생 데이터는 student-data.ts에서 import
 /* const studentData = [
@@ -137,49 +145,34 @@ const bioTemplates = [
   "소통과 공감을 중시하는 디자이너입니다. 디자인이 사회에 긍정적인 영향을 미칠 수 있다고 믿으며, 의미 있는 프로젝트에 참여하고자 합니다."
 ];
 
-// Instagram 사용자명 매핑(이름 기준, 동명이인은 배열 순서로 할당)
-function getInstagramFromMapping(name: string, seq: number): string {
-  const entry = (instagramHandlesByName as any)[name];
-  const normalize = (h: string) => (h || '').trim().replace(/^@/, '');
-  if (!entry) return '';
-  if (Array.isArray(entry)) {
-    const idx = Math.min(seq, entry.length - 1);
-    return normalize(entry[idx] || '');
-  }
-  return normalize(entry);
-}
+const normalizeInstagramHandle = (handle?: string): string =>
+  (handle ?? '').trim().replace(/^@/, '');
 
 // 실제 디자이너 데이터 생성
 export function generateDesigners(inputStudentData?: any[]): Designer[] {
   const dataToUse = inputStudentData || studentData;
-  const nameSeen: Record<string, number> = {};
   return dataToUse.map((student, index) => {
-    const seq = (nameSeen[student.name] = (nameSeen[student.name] || 0));
-    const instagram = getInstagramFromMapping(student.name, seq);
-    nameSeen[student.name] = seq + 1;
-    // 이메일 매핑 우선 적용 (동명이인은 배열 순서로)
-    const emailEntry: any = (emailByName as any)[student.name];
-    const email = Array.isArray(emailEntry)
-      ? (emailEntry[Math.min(seq, emailEntry.length - 1)] || student.email)
-      : (emailEntry || student.email);
-    
-    // 자기소개 매핑 (동명이인은 배열 순서 적용)
-    const bioEntry: any = (bioByName as any)[student.name];
-    const bio = Array.isArray(bioEntry)
-      ? (bioEntry[Math.min(seq, bioEntry.length - 1)] || bioTemplates[Math.floor(Math.random() * bioTemplates.length)])
-      : (bioEntry || bioTemplates[Math.floor(Math.random() * bioTemplates.length)]);
+    const nameKey = buildStudentNameKey(student.name, student.studentNumber);
+    const instagram = normalizeInstagramHandle(
+      instagramHandlesByName[nameKey] ?? instagramHandlesByName[student.name],
+    );
+    const email =
+      emailByName[nameKey] ?? emailByName[student.name] ?? student.email;
 
-    // 인터뷰 Q1 매핑 (동명이인은 배열 순서 적용)
-    const q1Entry: any = (interview1ByName as any)[student.name];
-    const interview1 = Array.isArray(q1Entry)
-      ? (q1Entry[Math.min(seq, q1Entry.length - 1)] || interview1Templates[Math.floor(Math.random() * interview1Templates.length)])
-      : (q1Entry || interview1Templates[Math.floor(Math.random() * interview1Templates.length)]);
+    const bio =
+      bioByName[nameKey] ??
+      bioByName[student.name] ??
+      bioTemplates[Math.floor(Math.random() * bioTemplates.length)];
 
-    // 인터뷰 Q2 매핑 (동명이인은 배열 순서 적용)
-    const q2Entry: any = (interview2ByName as any)[student.name];
-    const interview2 = Array.isArray(q2Entry)
-      ? (q2Entry[Math.min(seq, q2Entry.length - 1)] || interview2Templates[Math.floor(Math.random() * interview2Templates.length)])
-      : (q2Entry || interview2Templates[Math.floor(Math.random() * interview2Templates.length)]);
+    const interview1 =
+      interview1ByName[nameKey] ??
+      interview1ByName[student.name] ??
+      interview1Templates[Math.floor(Math.random() * interview1Templates.length)];
+
+    const interview2 =
+      interview2ByName[nameKey] ??
+      interview2ByName[student.name] ??
+      interview2Templates[Math.floor(Math.random() * interview2Templates.length)];
 
     return {
       id: index + 1,

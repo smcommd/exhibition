@@ -4,96 +4,96 @@ import { resolveAssetUrl } from '../utils/asset-url'
 // 실제 학생 데이터
 export const realStudentData = [
   { name: '강규리', studentNumber: '202120194', phone: '010 7167 4120', email: 'kyuri1414@naver.com' },
-  { name: '강민서', studentNumber: '202220190', phone: '010 4751 8353', email: 'det072927@gmail.com' },
-  { name: '고세진', studentNumber: '202120200', phone: '010 4227 0109', email: 'stopsejin@gmail.com' },
+  { name: '강민서', studentNumber: '202220190', phone: '010 4751 8353', email: 'qwers2rewq@naver.com' },
+  { name: '고세진', studentNumber: '202120200', phone: '010 4227 0109', email: 'nijesok.is.me@gmail.com' },
   { name: '고유빈', studentNumber: '202020188', phone: '010 9265 9553', email: 'gyubbin30@gmail.com' },
-  { name: '고유정', studentNumber: '202120201', phone: '010 5766 8909', email: 'rhdbwjd8909@gmail.com' },
+  { name: '고유정', studentNumber: '202120201', phone: '010 5766 8909', email: '57_jeong@naver.com' },
   { name: '금예은', studentNumber: '202120208', phone: '010 2680 1871', email: 'miso1871@naver.com' },
   { name: '김가은', studentNumber: '202220206', phone: '010 2529 1884', email: 'beyeong1884@gmail.com' },
   { name: '김가현', studentNumber: '202220207', phone: '010 2200 4300', email: 'ghkim4300@gmail.com' },
   { name: '김다예', studentNumber: '202120213', phone: '010 4936 1664', email: 'gdaye1334@gmail.com' },
-  { name: '김미연', studentNumber: '202120216', phone: '010 5250 9281', email: 'miyeonkim37@gmail.com' },
+  { name: '김미연', studentNumber: '202120216', phone: '010 5250 9281', email: 'nie.work.nie@gmail.com' },
   { name: '김민지', studentNumber: '202120222', phone: '010 6769 1517', email: 'mj22.ala@gmail.com' },
   { name: '김민지', studentNumber: '202120221', phone: '010 2274 2496', email: 'charlotte061680@gmail.com' },
   { name: '김서영', studentNumber: '202120225', phone: '010 4899 6370', email: 'idsy1549@naver.com' },
   { name: '김서진', studentNumber: '202120227', phone: '010 9956 3718', email: 'sjk080529334@gmail.com' },
-  { name: '김세미', studentNumber: '201820460', phone: '010 7768 9113', email: 'gvgvmm1202@naver.com' },
-  { name: '김수연', studentNumber: '202120229', phone: '010 5184 9179', email: 'kimsy9179@naver.com' },
+  { name: '김세미', studentNumber: '201820460', phone: '010 7768 9113', email: 'ksmsmsmu0211@gmail.com' },
+  { name: '김수연', studentNumber: '202120229', phone: '010 5184 9179', email: 'Kimsy9179@naver.com' },
   { name: '김수인', studentNumber: '202120230', phone: '010 9470 2390', email: 'sooiiin24@gmail.com' },
   { name: '김아름', studentNumber: '202120233', phone: '010 8077 0295', email: 'jangin0708@gmail.com' },
-  { name: '김원경', studentNumber: '202120235', phone: '010 9868 8400', email: 'yuki121002@naver.com' },
+  { name: '김원경', studentNumber: '202120235', phone: '010 9868 8400', email: 'bokchi0000@naver.com' },
   { name: '김재겸', studentNumber: '202020227', phone: '010 3147 0936', email: 'kjbj1031@gmail.com' },
   { name: '김준서', studentNumber: '202020231', phone: '010 6486 9656', email: 'kimkjs100@naver.com' },
   { name: '김지현', studentNumber: '202121459', phone: '010 7577 6527', email: 'ooib_@naver.com' },
-  { name: '김지혜', studentNumber: '202120242', phone: '010 2465 0818', email: 'kimjhye0903@gmail.com' },
+  { name: '김지혜', studentNumber: '202120242', phone: '010 2465 0818', email: 'kjh9659q@gmail.com' },
   { name: '김태희', studentNumber: '202120244', phone: '010 3760 3441', email: 'tb3441@naver.com' },
   { name: '김혜림', studentNumber: '202120248', phone: '010 7748 2905', email: 'khr05252@naver.com' },
   { name: '김혜숙', studentNumber: '202220248', phone: '010 4680 0436', email: 'hhye0718@naver.com' },
   { name: '김혜진', studentNumber: '202220249', phone: '010 9069 1985', email: 'kkimhj030417@gmail.com' },
-  { name: '김희수', studentNumber: '202020240', phone: '010 9530 2125', email: 'khsu010203@gmail.com' },
-  { name: '명규민', studentNumber: '202120258', phone: '010 4136 9676', email: 'gm021219@naver.com' },
+  { name: '김희수', studentNumber: '202020240', phone: '010 9530 2125', email: 'khsu010203@naver.com' },
+  { name: '명규민', studentNumber: '202120258', phone: '010 4136 9676', email: 'uface_@naver.com' },
   { name: '문송', studentNumber: '202120261', phone: '010 5395 3485', email: 'ssonge1255@gmail.com' },
-  { name: '문예현', studentNumber: '202020475', phone: '010 8434 3916', email: 'linamoon01@naver.com' },
-  { name: '박규영', studentNumber: '202120264', phone: '010 6645 7355', email: 'duddl_8@naver.com' },
-  { name: '박규희', studentNumber: '202120265', phone: '010 3064 2618', email: 'kkyuheeya0408@gmail.com' },
-  { name: '박부규', studentNumber: '202120268', phone: '010 4224 3660', email: 'syp107277001@gmail.com' },
+  { name: '문예현', studentNumber: '202020475', phone: '010 8434 3916', email: 'linamoonyh@gmail.com' },
+  { name: '박규영', studentNumber: '202120264', phone: '010 6645 7355', email: '9yuyoung9@gmail.com' },
+  { name: '박규희', studentNumber: '202120265', phone: '010 3064 2618', email: 'pkhee0408@gmail.com' },
+  { name: '박부규', studentNumber: '202120268', phone: '010 4224 3660', email: 'bugyu0011@naver.com' },
   { name: '박서진', studentNumber: '202120269', phone: '010 2906 2057', email: 'sepjini2057@gmail.com' },
-  { name: '박소연', studentNumber: '202021406', phone: '010 2705 6394', email: 'amyroom0201@gmail.com' },
-  { name: '박수진', studentNumber: '202121460', phone: '010 8816 4172', email: 'tnwlsdl1214@naver.com' },
-  { name: '박시온', studentNumber: '202120275', phone: '010 5549 5449', email: 'ooo5440@naver.com' },
+  { name: '박소연', studentNumber: '202021406', phone: '010 2705 6394', email: 'paxy2on@naver.com' },
+  { name: '박수진', studentNumber: '202121460', phone: '010 8816 4172', email: 'sjsjsjsj472@gmail.com' },
+  { name: '박시온', studentNumber: '202120275', phone: '010 5549 5449', email: 'siOff.Office@gmail.com' },
   { name: '박정민', studentNumber: '202120281', phone: '010 7714 6116', email: 'gimigimi72@naver.com' },
-  { name: '박준혁', studentNumber: '202020052', phone: '010 6486 3146', email: 'jacobopark@naver.com' },
-  { name: '박하빈', studentNumber: '202020260', phone: '010 6725 1243', email: 'habin0624@naver.com' },
+  { name: '박준혁', studentNumber: '202020052', phone: '010 6486 3146', email: 'junhyeokpark@gmail.com' },
+  { name: '박하빈', studentNumber: '202020260', phone: '010 6725 1243', email: 'haguma0624@naver.com' },
   { name: '박하은', studentNumber: '202221492', phone: '010 3799 4295', email: 'hayen730@naver.com' },
   { name: '박현민', studentNumber: '202121461', phone: '010 9580 3889', email: 'phm0237@naver.com' },
-  { name: '배가온', studentNumber: '202120287', phone: '010 3857 4933', email: 'qorkdhs3857@gmail.com' },
+  { name: '배가온', studentNumber: '202120287', phone: '010 3857 4933', email: 'qorkdhs02@naver.com' },
   { name: '백지민', studentNumber: '202221493', phone: '010 2216 6201', email: 'jimini6201@naver.com' },
   { name: '송시후', studentNumber: '202220285', phone: '010 3411 6617', email: 'songsilu7@gmail.com' },
-  { name: '송지수', studentNumber: '202120301', phone: '010 9142 4632', email: 'jssong1115@naver.com' },
+  { name: '송지수', studentNumber: '202120301', phone: '010 9142 4632', email: 'smjs2121@gmail.com' },
   { name: '송희원', studentNumber: '202021395', phone: '010 4335 7140', email: 'gstdvvip@naver.com' },
-  { name: '신은혜', studentNumber: '202221494', phone: '010 6628 8832', email: 'ququb1234@gmail.com' },
+  { name: '신은혜', studentNumber: '202221494', phone: '010 6628 8832', email: 'quv@naver.com' },
   { name: '안민', studentNumber: '202120312', phone: '010 3374 8662', email: 'asbin1005@gmail.com' },
   { name: '엄채은', studentNumber: '202220302', phone: '010 6652 6643', email: 'codms1588@naver.com' },
   { name: '유경주', studentNumber: '202120319', phone: '010 4490 6221', email: 'roro_owo@naver.com' },
   { name: '유서윤', studentNumber: '202120320', phone: '010 6500 0824', email: 'fuha2001@gmail.com' },
   { name: '유현정', studentNumber: '202120322', phone: '010 7630 8331', email: 'yhj21340@naver.com' },
-  { name: '유현주', studentNumber: '202220312', phone: '010 3340 8331', email: '202220312@sangmyung.kr' },
-  { name: '유환희', studentNumber: '202020295', phone: '010 5060 5495', email: 'book7194@gmail.com' },
-  { name: '윤서진', studentNumber: '202120323', phone: '010 7212 3393', email: 'smu21ysj@gmail.com' },
+  { name: '유현주', studentNumber: '202220312', phone: '010 3340 8331', email: 'yuhyunju1219@naver.com' },
+  { name: '유환희', studentNumber: '202020295', phone: '010 5060 5495', email: 'lllklk17@naver.com' },
+  { name: '윤서진', studentNumber: '202120323', phone: '010 7212 3393', email: 'westjin511@gmail.com' },
   { name: '이관렬', studentNumber: '202020303', phone: '010 8220 1261', email: 'gwanlyeoli@gmail.com' },
   { name: '이서영', studentNumber: '202121463', phone: '010 6687 0245', email: 'seoyoung020503@gmail.com' },
   { name: '이승주', studentNumber: '202020310', phone: '010 7942 1523', email: 'luh321264@gmail.com' },
-  { name: '이예슬', studentNumber: '202220326', phone: '010 3354 7360', email: 'daepts01@naver.com' },
+  { name: '이예슬', studentNumber: '202220326', phone: '010 3354 7360', email: 'eyesontheb0all@gmail.com' },
   { name: '이유진', studentNumber: '202120338', phone: '010 9880 2028', email: 'dldbwls726@gmail.com' },
   { name: '이은솔', studentNumber: '202220330', phone: '010 3319 6087', email: 'leees0903@naver.com' },
   { name: '이은진', studentNumber: '201920265', phone: '010 4841 2287', email: 'catlee74@naver.com' },
   { name: '이정오', studentNumber: '202020319', phone: '010 4424 3439', email: 'wjddh1201@gmail.com' },
   { name: '이지수', studentNumber: '202140343', phone: '010 3739 9780', email: 'cocu1234@naver.com' },
   { name: '이지수', studentNumber: '202120344', phone: '010 3400 3378', email: 'dl239287@gmail.com' },
-  { name: '이진영', studentNumber: '202121484', phone: '010 4106 5116', email: 'leejy54231@naver.com' },
-  { name: '이채영', studentNumber: '202120347', phone: '010 9755 3989', email: 'tjsdndlcodud1@gmail.com' },
+  { name: '이진영', studentNumber: '202121484', phone: '010 4106 5116', email: 'leejy011214@gmail.com' },
+  { name: '이채영', studentNumber: '202120347', phone: '010 9755 3989', email: '0chae3989@gmail.com' },
   { name: '이혁수', studentNumber: '202021410', phone: '010 7494 5414', email: 'hslee000106@gmail.com' },
   { name: '이현영', studentNumber: '202120348', phone: '010 6773 0687', email: 'smanhyy@gmail.com' },
   { name: '이현정', studentNumber: '202221497', phone: '010 4059 5408', email: 'lee540855@gmail.com' },
-  { name: '이혜경', studentNumber: '202120349', phone: '010 2650 4079', email: 'ms40790@naver.com' },
+  { name: '이혜경', studentNumber: '202120349', phone: '010 2650 4079', email: 'ms407905@gmail.com' },
   { name: '임아늘', studentNumber: '202120354', phone: '010 3597 7354', email: 'limdksmf@gmail.com' },
-  { name: '임지은', studentNumber: '202120358', phone: '010 7121 3529', email: 'bella1124@naver.com' },
+  { name: '임지은', studentNumber: '202120358', phone: '010 7121 3529', email: 'z71213529@gmail.com' },
   { name: '임지현', studentNumber: '202120359', phone: '010 4877 8323', email: 'sdrhc146@gmail.com' },
   { name: '전은총', studentNumber: '202120362', phone: '010 2633 7984', email: 'vvvapak@gmail.com' },
-  { name: '전초윤', studentNumber: '202120364', phone: '010 8225 8545', email: 'chdnsdldmldk@naver.com' },
+  { name: '전초윤', studentNumber: '202120364', phone: '010 8225 8545', email: 'chojohaeyo2023@gmail.com' },
   { name: '정다인', studentNumber: '202220350', phone: '010 8341 5959', email: 'jeongdain7@naver.com' },
   { name: '정유선', studentNumber: '202120370', phone: '010 4728 1939', email: 'qorhvk1507@gmail.com' },
   { name: '정재원', studentNumber: '202020348', phone: '010 3940 2661', email: 'jaewon3940@gmail.com' },
-  { name: '정지수', studentNumber: '202120377', phone: '010 3092 9212', email: 'seagull0032@naver.com' },
-  { name: '정지온', studentNumber: '201920294', phone: '010 6518 2499', email: 'jiondog@naver.com' },
+  { name: '정지수', studentNumber: '202120377', phone: '010 3092 9212', email: 'jisoo0032@gmail.com' },
+  { name: '정지온', studentNumber: '201920294', phone: '010 6518 2499', email: 'wjdwldhs7@gmail.com' },
   { name: '조은영', studentNumber: '202120384', phone: '010 9475 7364', email: 'eyoung2627@gmail.com' },
   { name: '조은희', studentNumber: '202120385', phone: '010 5105 0311', email: 'whdmsgml0311@naver.com' },
-  { name: '지예린', studentNumber: '202221498', phone: '010 6680 5623', email: 'ryusday0925@gmail.com' },
+  { name: '지예린', studentNumber: '202221498', phone: '010 6680 5623', email: 'yerin3568@naver.com' },
   { name: '천다영', studentNumber: '202120388', phone: '010 3776 1394', email: 'cj457927@gmail.com' },
-  { name: '최지윤', studentNumber: '202020381', phone: '010 3483 3042', email: 'jeenee0826@naver.com' },
-  { name: '최지윤', studentNumber: '202120393', phone: '010 4052 5594', email: 'vhrxkstlwkr1234@naver.com' },
-  { name: '한유진', studentNumber: '202120396', phone: '010 8864 2427', email: '202120396@sangmyung.kr' },
-  { name: '허윤서', studentNumber: '202120400', phone: '010 9074 7612', email: 'holly0928@naver.com' },
+  { name: '최지윤', studentNumber: '202020381', phone: '010 3483 3042', email: 'chlwldbs0328@gmail.com' },
+  { name: '최지윤', studentNumber: '202120393', phone: '010 4052 5594', email: 'vhrxkstlwkr123@gmail.com' },
+  { name: '한유진', studentNumber: '202120396', phone: '010 8864 2427', email: 'hanyj4628@naver.com' },
+  { name: '허윤서', studentNumber: '202120400', phone: '010 9074 7612', email: 'mangbib01@gmail.com' },
   { name: '허자연', studentNumber: '202120401', phone: '010 3521 6514', email: 'wiint.nov@gmail.com' },
   { name: '홍남영', studentNumber: '202120402', phone: '010 2569 4233', email: 'hny0207@naver.com' },
   { name: '홍유리', studentNumber: '202020399', phone: '010 6679 0555', email: '8410hong@naver.com' },
@@ -101,6 +101,27 @@ export const realStudentData = [
 ];
 
 type StudentRecord = (typeof realStudentData)[number];
+
+const duplicateNameCounts = realStudentData.reduce<Record<string, number>>((acc, student) => {
+  acc[student.name] = (acc[student.name] ?? 0) + 1;
+  return acc;
+}, {});
+
+const duplicateNameSet = new Set(
+  Object.entries(duplicateNameCounts)
+    .filter(([, count]) => count > 1)
+    .map(([name]) => name),
+);
+
+export const buildStudentNameKey = (name: string, studentNumber?: string): string => {
+  if (duplicateNameSet.has(name) && studentNumber) {
+    return `${name} (${studentNumber})`;
+  }
+  return name;
+};
+
+export const getStudentDisplayName = (student: StudentRecord): string =>
+  buildStudentNameKey(student.name, student.studentNumber);
 
 const koreanNameCollator = new Intl.Collator('ko-KR', { sensitivity: 'base' });
 const HANGUL_INITIALS = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'] as const;
@@ -299,8 +320,8 @@ export function buildProfileImageSrc(studentNumber: string | undefined, fallback
   return getProfileImageMeta(studentNumber, fallbackName).src
 }
 
-// 인스타그램 핸들(이름 기준, 중복 이름은 배열 순서대로 매칭)
-export const instagramHandlesByName: Record<string, string | string[]> = {
+// 인스타그램 핸들(이름 기준, 동명이인은 `이름 (학번)` 형태로 구분)
+export const instagramHandlesByName: Record<string, string> = {
   '유환희': 'lllk_lk',
   '강규리': 'kyuri_ii',
   '강민서': 'ms_k__2',
@@ -312,7 +333,8 @@ export const instagramHandlesByName: Record<string, string | string[]> = {
   '김가현': 'yangga_gh',
   '김다예': 'd.day_e',
   '김미연': 'nie.work',
-  '김민지': ['rozie.onair', 'kuhea0103'],
+  '김민지 (202120222)': 'rozie.onair',
+  '김민지 (202120221)': 'kuhea0103',
   '김서영': 'imsue0_k',
   '김서진': 'n2zck0',
   '김세미': '',
@@ -363,7 +385,8 @@ export const instagramHandlesByName: Record<string, string | string[]> = {
   '이은솔': 'ssool_ee',
   '이은진': '_lee.ej',
   '이정오': '0oooooooooojo_',
-  '이지수': ['jitori_21', 'bakbaklee_js'],
+  '이지수 (202140343)': 'jitori_21',
+  '이지수 (202120344)': 'bakbaklee_js',
   '이진영': 'ab0ut.form',
   '이채영': 'codexx0313',
   '이현영': 'haennaengi',
@@ -384,7 +407,8 @@ export const instagramHandlesByName: Record<string, string | string[]> = {
   '조은희': 'dmsgml_01',
   '지예린': 'maezioi',
   '천다영': 'day_y0ung_',
-  '최지윤': ['zzziz_zip', 'choi_jiyun_'],
+  '최지윤 (202020381)': 'zzziz_zip',
+  '최지윤 (202120393)': 'choi_jiyun_',
   '한유진': 'byeoriyuu',
   '허윤서': '',
   '홍남영': 'namiioong',
@@ -395,9 +419,8 @@ export const instagramHandlesByName: Record<string, string | string[]> = {
   '허자연': 'jay___yeon.0',
 };
 
-// 이메일 매핑 (이름 기준, 동명이인은 배열 순서로 매칭)
-export const emailByName: Record<string, string | string[]> = {
-  '유환희': 'lllklk17@naver.com',
+// 이메일 매핑 (이름 기준, 동명이인은 `이름 (학번)` 키 사용)
+export const emailByName: Record<string, string> = {
   '강규리': 'kyuri1414@naver.com',
   '강민서': 'qwers2rewq@naver.com',
   '고세진': 'nijesok.is.me@gmail.com',
@@ -408,12 +431,14 @@ export const emailByName: Record<string, string | string[]> = {
   '김가현': 'ghkim4300@gmail.com',
   '김다예': 'gdaye1334@gmail.com',
   '김미연': 'nie.work.nie@gmail.com',
-  '김민지': ['charlotte061680@gmail.com', 'mj22.ala@gmail.com'],
+  '김민지 (202120221)': 'charlotte061680@gmail.com',
+  '김민지 (202120222)': 'mj22.ala@gmail.com',
   '김서영': 'idsy1549@naver.com',
   '김서진': 'sjk080529334@gmail.com',
   '김세미': 'ksmsmsmu0211@gmail.com',
   '김수연': 'Kimsy9179@naver.com',
   '김수인': 'sooiiin24@gmail.com',
+  '김아름': 'jangin0708@gmail.com',
   '김원경': 'bokchi0000@naver.com',
   '김재겸': 'kjbj1031@gmail.com',
   '김준서': 'kimkjs100@naver.com',
@@ -432,10 +457,11 @@ export const emailByName: Record<string, string | string[]> = {
   '박부규': 'bugyu0011@naver.com',
   '박서진': 'sepjini2057@gmail.com',
   '박소연': 'paxy2on@naver.com',
+  '박수진': 'sjsjsjsj472@gmail.com',
   '박시온': 'siOff.Office@gmail.com',
   '박정민': 'gimigimi72@naver.com',
   '박준혁': 'junhyeokpark@gmail.com',
-  '박하빈': 'haguma0624@gmail.com',
+  '박하빈': 'haguma0624@naver.com',
   '박하은': 'hayen730@naver.com',
   '박현민': 'phm0237@naver.com',
   '배가온': 'qorkdhs02@naver.com',
@@ -450,6 +476,7 @@ export const emailByName: Record<string, string | string[]> = {
   '유서윤': 'fuha2001@gmail.com',
   '유현정': 'yhj21340@naver.com',
   '유현주': 'yuhyunju1219@naver.com',
+  '유환희': 'lllklk17@naver.com',
   '윤서진': 'westjin511@gmail.com',
   '이관렬': 'gwanlyeoli@gmail.com',
   '이서영': 'seoyoung020503@gmail.com',
@@ -459,9 +486,10 @@ export const emailByName: Record<string, string | string[]> = {
   '이은솔': 'leees0903@naver.com',
   '이은진': 'catlee74@naver.com',
   '이정오': 'wjddh1201@gmail.com',
-  '이지수': ['cocu1234@naver.com', 'dl239287@gmail.com'],
+  '이지수 (202140343)': 'cocu1234@naver.com',
+  '이지수 (202120344)': 'dl239287@gmail.com',
   '이진영': 'leejy011214@gmail.com',
-  '이채영': '0chae3989@naver.com',
+  '이채영': '0chae3989@gmail.com',
   '이현영': 'smanhyy@gmail.com',
   '이현정': 'lee540855@gmail.com',
   '이혜경': 'ms407905@gmail.com',
@@ -479,19 +507,19 @@ export const emailByName: Record<string, string | string[]> = {
   '조은희': 'whdmsgml0311@naver.com',
   '지예린': 'yerin3568@naver.com',
   '천다영': 'cj457927@gmail.com',
-  '최지윤': ['chlwldbs0328@gmail.com', 'vhrxkstlwkr123@gmail.com'],
+  '최지윤 (202020381)': 'chlwldbs0328@gmail.com',
+  '최지윤 (202120393)': 'vhrxkstlwkr123@gmail.com',
   '한유진': 'hanyj4628@naver.com',
   '허윤서': 'mangbib01@gmail.com',
+  '허자연': 'wiint.nov@gmail.com',
   '홍남영': 'hny0207@naver.com',
   '홍유리': '8410hong@naver.com',
   '황보민정': 'hbmj0511@gmail.com',
-  '박수진': 'sjsjsjsj472@gmail.com',
-  '김아름': 'jangin0708@gmail.com',
-  '허자연': 'wiint.nov@gmail.com',
+
 };
 
-// 자기소개 매핑 (이름 기준, 동명이인은 배열 순서대로 매칭)
-export const bioByName: Record<string, string | string[]> = {
+// 자기소개 매핑 (이름 기준, 동명이인은 `이름 (학번)` 키 사용)
+export const bioByName: Record<string, string> = {
   '유환희': `일러스트레이션을 기반으로 다양한 실험을 이어가는 디자이너 유환희입니다. 저는 상상력과 재미가 담긴 작업을 통해 아이들에게는 따뜻한 위로와 즐거움을, 어른들에게는 잊고 있던 동심과 새로운 영감을 전하고자 합니다. 제 작품이 모두에게 열린 놀이터가 되기를 바랍니다.`,
   '강규리': `안녕하세요, 브랜딩과 UX/UI를 사랑하는 디자이너 강규리입니다. 짧다면 짧고 길다면 긴 4년 동안 전시·앱·브랜딩 프로젝트에 다양하게 도전하며, 소비자에게 즐거운 경험을 주는 디자인을 연구해왔습니다.`,
   '강민서': `막연히만 느껴지던 졸업이 어느덧 눈앞에 다가왔습니다. 그림을 좋아해 무작정 이 길을 걷던 제가 이젠 디자인을 통해 문제를 발견하고 새 가능성을 제시하는 일에 흥미를 느끼게 되었습니다. 이번 전시는 그러한 제 변화와 성장을 담은 자리입니다. 방문해 주셔서 감사드리며 앞으로도 정진하는 모습 보여드리겠습니다.`,
@@ -503,10 +531,8 @@ export const bioByName: Record<string, string | string[]> = {
   '김가현': `사소한 호기심을 바탕으로 새로운 시도를 즐기며 작은 발견의 확장을 추구하는 디자이너 김가현입니다. 저만의 귀엽고 아기자기한 감성을 담아, 보는 이들이 따뜻한 즐거움을 느낄 수 있는 디자인을 지향합니다. 작은 즐거움이 전해지길 바라며, 앞으로도 따뜻한 감성을 담은 디자인을 이어가고자 합니다.`,
   '김다예': `안녕하세요, 새로움을 추구하며 배우고 성장하는 디자이너 김다예입니다. 패키지, 브랜드, 타이포그래피 등 다양한 분야를 경험하며 한 단계씩 나아가고 있으며, 이러한 시도와 경험을 통해 폭넓은 시각과 가능성을 확장해 나가고 있습니다.`,
   '김미연': `올해는 저에 대해 고민할 수 있는 시간이 가장 많았던 1년이었습니다. 무엇을 좋아하는지, 어떤 디자인을 하고 싶은지, 또 어떤 삶을 살고 싶은지 고민하면서 소중한 작품을 만들었습니다. 대단하진 않지만, 좋은 마무리를 한 것 같아 기쁩니다. 마지막으로 졸업 축하해 얘들아, 행복하자!`,
-  '김민지': [
-    `일상의 흐름을 관찰하고 기록하는 디자이너 김민지입니다. UX/UI를 중심으로 브랜드와 경험을 연결하며, 사람들의 일상에 자연스럽게 스며드는 디자인을 지향합니다. 이번 졸업전시는 작은 불편을 발견하고 함께 살아가는 방식을 고민하며, 이를 따뜻한 시선으로 풀어낸 결과물입니다. 감사합니다.`,
-    `디자인을 공부하며 일상의 사소한 순간을 새롭게 바라보는 눈을 갖게 됐습니다. 억지로 거창하기보다 작은 위트와 재미를 담아내고 싶습니다. 이번 작업이 여러분께 잠시라도 웃음을 전할 수 있기를 바랍니다.`
-  ],
+  '김민지 (202120222)': `일상의 흐름을 관찰하고 기록하는 디자이너 김민지입니다. UX/UI를 중심으로 브랜드와 경험을 연결하며, 사람들의 일상에 자연스럽게 스며드는 디자인을 지향합니다. 이번 졸업전시는 작은 불편을 발견하고 함께 살아가는 방식을 고민하며, 이를 따뜻한 시선으로 풀어낸 결과물입니다. 감사합니다.`,
+  '김민지 (202120221)': `디자인을 공부하며 일상의 사소한 순간을 새롭게 바라보는 눈을 갖게 됐습니다. 억지로 거창하기보다 작은 위트와 재미를 담아내고 싶습니다. 이번 작업이 여러분께 잠시라도 웃음을 전할 수 있기를 바랍니다.`,
   '김서영': `안녕하세요. 미지의 우주를 탐험하듯 새로운 디자인 세계를 탐험하는 디자이너 김서영입니다. 변화하는 환경과 기술 속에서 새로운 커뮤니케이션 방식을 연구하며, 브랜드·그래픽·UI·UX·영상 등 다양한 영역을 아우르고 사용자 경험을 중심으로 디자인합니다.`,
   '김서진': `관심 가져 주시고, 조언해주시고, 방문해주신 여러분 덕분에 무사히 졸업 전시를 마무리할 수 있게 되었습니다. 바쁘신 와중에 제 작품을 보러 와 주신 모든 분들께 감사드리며, 선한 영향력을 끼칠 수 있도록 노력하겠습니다.`,
   '김세미': `차별성을 핵심으로 삼아 독창적 시각과 감각을 제안하며, 새로운 경험과 가치를 창출하고자 합니다. 즐거운 전시 되시길 바랍니다.`,
@@ -557,10 +583,8 @@ export const bioByName: Record<string, string | string[]> = {
   '이은솔': `안녕하세요. 더 좋은 결과물을 만들기 위해 많은 고민과 시도를 거듭하며 이번 전시를 준비했습니다. 다양한 실험과 시도를 하며 기억되는 디자인을 하는 디자이너가 되길 바라는 마음으로 작업을 진행하고 있습니다. 제 작업은 일상 속에서 발견한 즐거움을 시각적으로 풀어내는 데 집중하며, 언제나 진심을 담아 표현하고자 합니다.`,
   '이은진': `안녕하세요. 이번 졸업 작품은 새로운 시도와 도전으로 이루어졌다고 생각합니다. 해보지 않았던 것을 도전해 보았고, 앞으로도 이러한 시도를 더 해보고자 합니다. 이번 작품은 단순한 졸업을 위한 작품이 아닌 저의 커리어의 시작이라고 생각하고 작업하였습니다. 앞으로 저는 저만의 이야기를 작품으로 녹여내는 디자이너로 성장하고 싶습니다.`,
   '이정오': `저는 사용자 경험을 중심으로 문제를 해결하는 커뮤니케이션 디자이너입니다. 24절기를 담은 워치페이스와 인간 유형을 기록한 HUMON 도감을 통해, 일상 속에서 공감할 수 있는 디자인을 만들고 있습니다.`,
-  '이지수': [
-    `안녕하세요. 저의 시선이 머문 순간과 성장의 모험을 담은 일러스트와 디자인 작업들을 이번 졸업 작품으로 전시하게 되었습니다. 작품 속에 숨겨진 이야기들을 발견하며 즐겨주시면 감사하겠습니다.`,
-    `안녕하세요, 즐거움을 추구하는 디자이너 이지수입니다. 이번 졸업전시는 일러스트레이션을 기반으로 동화책, 일러스트북은 물론 웹디자인과 영상까지 작업 스펙트럼을 넓혔습니다. 졸업전시를 통해 배운 것을 토대로 저의 솔직한 시각을 담은 결과물을 선보입니다. 즐거운 관람 되시길 바랍니다.`
-  ],
+  '이지수 (202140343)': `안녕하세요. 저의 시선이 머문 순간과 성장의 모험을 담은 일러스트와 디자인 작업들을 이번 졸업 작품으로 전시하게 되었습니다. 작품 속에 숨겨진 이야기들을 발견하며 즐겨주시면 감사하겠습니다.`,
+  '이지수 (202120344)': `안녕하세요, 즐거움을 추구하는 디자이너 이지수입니다. 이번 졸업전시는 일러스트레이션을 기반으로 동화책, 일러스트북은 물론 웹디자인과 영상까지 작업 스펙트럼을 넓혔습니다. 졸업전시를 통해 배운 것을 토대로 저의 솔직한 시각을 담은 결과물을 선보입니다. 즐거운 관람 되시길 바랍니다.`,
   '이진영': `저는 변화하는 흐름 속에서 새로운 가능성을 발견하고, 이를 디자인으로 구현하는 데 집중합니다. 다양한 분야를 넘나들며 접점을 찾아내고 시각적 경험으로 확장합니다.`,
   '이채영': `안녕하세요. 제 전시는 ‘집’과 ‘관계’에 주목하며, 일상 속 가장 가까운 공간과 친밀한 관계를 재해석하는 시도입니다. 이를 통해 이전에 나누지 못했던 대화가 시작되길 바라며, 저는 앞으로도 익숙한 풍경 속에서 낯선 질문을 던지고 그 대화를 통해 또 다른 시선을 발견하는 디자이너로 성장하고자 합니다.`,
   '이혁수': '저는 디자인을 넘어 AI와 기술을 결합해 새로운 경험을 만드는 디자이너입니다. 단순한 시각적 결과물이 아니라, 사용자의 맥락과 감정을 읽어내고 연결하는 브랜드와 서비스를 고민합니다. 졸업 전시를 통해, 디자인이 어떻게 사람들의 선택과 경험을 바꾸는 힘이 될 수 있는지를 탐구하고자 합니다.',
@@ -581,10 +605,8 @@ export const bioByName: Record<string, string | string[]> = {
   '조은희': `아이디어를 시각적으로 풀어내는 디자이너 조은희 입니다. 그래픽과 일러스트레이션을 중심으로 다양한 매체에서 실험하며, 사용자가 공감할 수 있는 디자인을 추구합니다. 이번 졸업전시는 그간의 배움과 성장을 집약한 결과물이자, 앞으로의 도전을 위한 출발점입니다.`,
   '지예린': `저는 디자인을 통해 세대와 사회가 마주한 문제를 바라보고, 소통의 해답을 찾아가고자 합니다. 이번 졸업전시는 그 과정 속에서 얻은 성찰과 시도를 담아낸 결과물입니다. 관람해주시는 모든 분들께 따뜻한 공감으로 전해지길 바랍니다.`,
   '천다영': `안녕하세요. 천다영입니다. 졸업작품을 준비면서 수많은 난관 속에서 포기하고 싶었던 순간도 있었지만 4년간의 여정을 잘 마무리하겠다는 마음으로 달려와 시행착오 끝에 지금의 결과물을 완성할 수 있었습니다. 이 과정을 통해 얻은 배움과 경험을 바탕으로 보다 넓은 시각을 가지는 디자이너가 되고자 합니다.`,
-  '최지윤': [
-    `안녕하세요. 시작은 작았지만 꾸준히 이어온 시간 속에서 마무리할 수 있어 뜻깊고 뿌듯합니다. 이번 졸업 전시는 그동안의 배움과 고민을 정리하고 다음 단계로 나아가기 위한 기록이기도 합니다. 들러주신 모든 분들께 감사드리며, 앞으로도 계속 성장하겠습니다. 시간 내어 방문해 주셔서 다시 한 번 감사합니다.`,
-    `저는 일상의 불편과 사회적 모순을 유쾌한 시선으로 전환해 새로운 관점을 제안하는 시각디자이너입니다. 실험과 참여를 통해 디자인을 공감과 연결의 매개로 확장하며, 사람들의 대화를 이끌어내는 것을 가장 큰 가치로 삼습니다.`
-  ],
+  '최지윤 (202020381)': `안녕하세요. 시작은 작았지만 꾸준히 이어온 시간 속에서 마무리할 수 있어 뜻깊고 뿌듯합니다. 이번 졸업 전시는 그동안의 배움과 고민을 정리하고 다음 단계로 나아가기 위한 기록이기도 합니다. 들러주신 모든 분들께 감사드리며, 앞으로도 계속 성장하겠습니다. 시간 내어 방문해 주셔서 다시 한 번 감사합니다.`,
+  '최지윤 (202120393)': `저는 일상의 불편과 사회적 모순을 유쾌한 시선으로 전환해 새로운 관점을 제안하는 시각디자이너입니다. 실험과 참여를 통해 디자인을 공감과 연결의 매개로 확장하며, 사람들의 대화를 이끌어내는 것을 가장 큰 가치로 삼습니다.`,
   '한유진': `차분한 시선으로 문제를 관찰하고 풀어내는 디자이너 한유진입니다. 이번 전시는 그동안의 배움과 성장을 솔직하게 담아낸 결과물입니다. 바쁘신 와중에 방문해 주셔서 감사드립니다.`,
   '허윤서': `일상의 불편과 심리적 경험을 관찰하고, 이를 시각 언어로 풀어 가볍고 즐거운 변화를 만드는 방법을 고민합니다.`,
   '홍남영': `안녕하세요. 의미 있는 작업을 추구하는 디자이너 홍남영입니다. 이번 졸업 전시는 앞으로 나아갈 길을 확인하고 다져가는 과정에서 탄생한 작업물입니다. 이 경험을 밑거름 삼아 앞으로 더 깊이 있는 작업으로 누군가에게 의미 있는 경험으로 다가가기를 소망하며, 찾아주신 모든 분께 감사의 마음을 전합니다.`,
@@ -595,8 +617,8 @@ export const bioByName: Record<string, string | string[]> = {
   '허자연': `새로운 방향을 탐구하며, 사용자에게 길잡이가 되고 싶은 디자이너 허자연입니다. 학부 생활 동안 여러 디자인을 경험하였고, 그중에서도 사람들의 삶에 닿는 문제를 디자인으로 해석하고 해결하는 일에서 큰 보람을 느꼈습니다. 이번 전시는 제가 지향하는 디자인을 담아낸 결과물이며 저의 디자인이 누군가의 길 위에 작은 불빛이 되기를 바랍니다.`,
 };
 
-// 인터뷰 Q1 (이름 기준, 동명이인은 배열 순서대로 매칭)
-export const interview1ByName: Record<string, string | string[]> = {
+// 인터뷰 Q1 (이름 기준, 동명이인은 `이름 (학번)` 키 사용)
+export const interview1ByName: Record<string, string> = {
   '유환희': `4년 동안 디자인을 하며 일상이 곧 소재가 된다는 걸 배웠습니다. 작은 감정과 풍경을 관찰하는 습관이 저만의 작업 세계를 넓혀주었습니다.`,
   '강규리': `예전에는 예쁜 물건을 보면 바로 구매했지만, 이제는 그 물건이 어떤 목적과 의도로 만들어졌는지 먼저 고민하게 되었습니다.`,
   '강민서': `평소 가볍게 지나치던 것들을 유심히 관찰하는 습관이 생겼습니다. 좋아 보인다면 왜 그런지, 나빠 보인다면 그 이유는 무엇인지 같은 것을 생각하면서요. 비단 사물뿐만 아니라 풍경이나 사람까지도 눈여겨 보다 보면 뜻밖의 아이디어를 얻을 때가 많습니다.`,
@@ -608,10 +630,8 @@ export const interview1ByName: Record<string, string | string[]> = {
   '김가현': `폴더 정리와 수정 전 버전을 꼭 저장하는 습관이 생겼습니다. 아주 작은 습관이지만 안정감에 큰 도움이 되며, 디자인을 대하는 제 태도가 더욱 꼼꼼해졌습니다.`,
   '김다예': `시간 분배와 저장을 주기적으로 하는 습관이 생겼습니다. 또 디자인을 하면서 다양한 장르의 레퍼런스를 수집하는 습관도 지니게 되었습니다.`,
   '김미연': `어떤 작업물을 볼 때 ‘어떤 의도로 저런 디자인을 했을까’ 하는 생각을 무의식적으로 하곤 해요. 물론 다 알 수는 없지만, 그렇게 고민하다 보면 단순히 예쁘다에서 멈추지 않고 디자이너의 관점으로 바라보게 되는 것 같아요.`,
-  '김민지': [
-    `길거리 간판들이나 전단지들을 보면서 자간, 행간 등을 무의식적으로 확인하게 됩니다. 그리고 서점이나 소품샵 등을 다니면서 좋은 레퍼런스가 있다면 카메라로 사진을 찍거나 리플렛 등은 언제 필요할지 모르니까 하면서 집에 가져오게 되는 것 같아요.`,
-    `무언가를 하다 보면 습관처럼 Ctrl+S를 누르는 버릇이 생겼다. 저장을 실시간으로 계속 하지 않으면 불안해진다...`
-  ],
+  '김민지 (202120222)': `길거리 간판들이나 전단지들을 보면서 자간, 행간 등을 무의식적으로 확인하게 됩니다. 그리고 서점이나 소품샵 등을 다니면서 좋은 레퍼런스가 있다면 카메라로 사진을 찍거나 리플렛 등은 언제 필요할지 모르니까 하면서 집에 가져오게 되는 것 같아요.`,
+  '김민지 (202120221)': `무언가를 하다 보면 습관처럼 Ctrl+S를 누르는 버릇이 생겼다. 저장을 실시간으로 계속 하지 않으면 불안해진다...`,
   '김서영': `4년간 디자인을 전공하며 생긴 새로운 습관은, 일상에서 마주치는 다양한 그래픽을 유심히 관찰하고 그 구성과 의도를 분석해보는 것입니다. 이를 통해 디자인을 바라보는 시각과 사고가 한층 넓어졌습니다.`,
   '김서진': `작업량이 늘어날 수록, 파일이 어디 있는지 모르거나 삭제해 버리는 불상사가 생겨서 파일마다 손수 이름을 붙여 주는 습관이 생겼습니다.`,
   '김세미': `사물을 다각도로 바라보고 문제를 새롭게 정의하는 습관과 작은 디테일까지 놓치지 않으려는 태도가 생겼습니다.`,
@@ -663,10 +683,8 @@ export const interview1ByName: Record<string, string | string[]> = {
   '이은솔': `일상과 디자인이 별개라고 생각하지 않고 실제 삶에서 적용될 수 있는 디자인 요소를 찾으며 호기심을 갖고 탐구하는 자세를 가질 수 있었습니다.`,
   '이은진': `어떤 작업을 하든 ctrl s를 자주 누르게 되는 것 같습니다. 과거에 한번 포토샵 오류로 인해 오래 작업한 작업물을 잃은 이후로 생긴 습관입니다. 또 전시를 볼 때 자연스럽게 타이포그래피를 더 유심히 보게 되는 것 같고, 마음에 드는 타이포는 사진으로 찍어 따로 저장해놓습니다.`,
   '이정오': `문제를 다양한 시각에서 바라보고 해결책을 탐구하는 습관이 생겼습니다. 사용자의 경험을 중심에 두고 끊임없이 질문하며 디자인하게 되었습니다.`,
-  '이지수': [
-    `저는 항상 노트북과 아이패드를 들고 다니며 중간 중간 작업하는 습관이 생겼습니다. 그렇게 쌓여가는 작업 파일을 보며, 단순한 물리적 공간이 아닌 저만의 디자인 영역이 커지고 있다는 것을 느끼게 되었습니다.`,
-    `다양한 매체별 프로젝트를 진행하며 체계적인 일정 관리 및 정리 습관을 갖게되었습니다. 또한, 리서치 과정에서 사실 확인을하고 디자인과정에서 표절 검토를 하는 것이 습관화가 되었습니다.`
-  ],
+  '이지수 (202140343)': `저는 항상 노트북과 아이패드를 들고 다니며 중간 중간 작업하는 습관이 생겼습니다. 그렇게 쌓여가는 작업 파일을 보며, 단순한 물리적 공간이 아닌 저만의 디자인 영역이 커지고 있다는 것을 느끼게 되었습니다.`,
+  '이지수 (202120344)': `다양한 매체별 프로젝트를 진행하며 체계적인 일정 관리 및 정리 습관을 갖게되었습니다. 또한, 리서치 과정에서 사실 확인을하고 디자인과정에서 표절 검토를 하는 것이 습관화가 되었습니다.`,
   '이진영': `일상의 작은 요소까지 디자인적 시각으로 관찰하고, 메시지와 표현을 고민하는 태도를 키웠습니다.`,
   '이채영': `밤낮이 바뀌는 경우가 많아 잘 수 있을 때 바로 잠드는 습관이 생겼습니다. 또 작업 과정에서 수많은 수정과 변화를 겪다 보니, 예전처럼 처음부터 완벽히 완성해야 한다는 생각보다는 중간 과정을 거듭하며 차근차근 쌓아 올리는 태도를 배우게 되었습니다.`,
   '이현영': `힘숨찐'을 알아보는 능력이 생겼어요. 좋은 디자인이란 건, 밀도 있고 화려하며 눈에 만족감을 주는 시각 이미지인 줄만 알았는데요. 여백, 절제력, 위계질서가 디자인의 핵심인 걸 깨닫는 것이 4년 동안 디자인을 배우는 과정이란 걸 이제야 알았어요.`,
@@ -686,10 +704,8 @@ export const interview1ByName: Record<string, string | string[]> = {
   '조은희': `무심히 지나칠 순간을 기록하며 관찰하는 태도가 생겼습니다. 사소한 발견이 뜻밖의 창작으로 연결된다는 걸 배웠습니다.`,
   '지예린': `평범한 일상의 사소한 순간조차 ‘더 나은 경험으로 바꿀 수 없을까?’ 하고 관찰하고 상상하는 습관이 생겼습니다. 익숙한 것 속에서도 개선점을 발견하고 아이디어를 떠올리는 태도는 전공을 통해 얻은 가장 큰 변화입니다.`,
   '천다영': `현수막이나 간판 등 일상에서 마주하는 글자는 이제 그냥 지나치지 않는 것 같습니다. 어느새 조건 반사처럼 폰트를 분석하는 습관이 생겼습니다. 또 작업을 하면서 스스로 만족스럽지 않다면 엎어버리는 과감한 태도도 생긴 것 같습니다. `,
-  '최지윤': [
-    `길을 걷다가도 간판이나 안내물처럼 스쳐 지나가는 것들을 자꾸 눈여겨보게 됩니다. 예전엔 그냥 지나쳤을 것들을 이제는 디자인적으로 관찰하는 습관이 생겼습니다.`,
-    `익숙한 문제를 새롭게 바라보고, 다양한 가능성을 실험하며, 디자인을 대화와 공감의 매개로 삼는 태도가 생겼습니다.`
-  ],
+  '최지윤 (202020381)': `길을 걷다가도 간판이나 안내물처럼 스쳐 지나가는 것들을 자꾸 눈여겨보게 됩니다. 예전엔 그냥 지나쳤을 것들을 이제는 디자인적으로 관찰하는 습관이 생겼습니다.`,
+  '최지윤 (202120393)': `익숙한 문제를 새롭게 바라보고, 다양한 가능성을 실험하며, 디자인을 대화와 공감의 매개로 삼는 태도가 생겼습니다.`,
   '한유진': `간판이나 메뉴판을 보면 저도 모르게 폰트나 디자인을 유심히 관찰하는 습관이 생긴 것 같습니다.`,
   '허윤서': `사고 싶은 책을 보면 참지 못하고 구매합니다.`,
   '홍남영': `디자인을 전공하면서 제가 추구하는 작업의 분위기와 창작 방식을 찾기 위해 이전보다 더 많은 시간을 관찰에 할애하게 되고, 주변을 분석하는 습관을 들이게 되었습니다. `,
@@ -701,9 +717,9 @@ export const interview1ByName: Record<string, string | string[]> = {
   '이혁수': `디자인 전공 4년 동안 저는 단순히 결과물을 만드는 태도에서 벗어나, 브랜드의 본질을 질문하고 과정 속에서 답을 찾아가는 습관을 갖게 되었습니다. 관찰과 탐구를 통해 디자인의 의미를 찾고, 기술과 브랜딩을 연결하며 새로운 가능성을 실험하는 태도가 자연스럽게 자리 잡았죠. 이제 디자인은 저에게 단순한 전공을 넘어, 사람들의 경험과 선택을 바꾸는 하나의 도구가 되었습니다.`,
 };
 
-// 인터뷰 Q2 (이름 기준, 동명이인은 배열 순서대로 매칭)
+// 인터뷰 Q2 (이름 기준, 동명이인은 `이름 (학번)` 키 사용)
 // 값이 없으면 기존 템플릿(interview2Templates)로 대체됩니다.
-export const interview2ByName: Record<string, string | string[]> = {
+export const interview2ByName: Record<string, string> = {
   '유환희': `졸업 작품을 준비하며 가장 고민했던 점은 제 이야기가 단순히 예쁜 그림이 아닌, 사람들에게 어떤 의미와 감정을 줄 수 있을지였습니다.`,
   '강규리': `동기들과 학생회관에서 함께 작업하며 맛있는 음식을 시켜 먹던 순간이 큰 힘이 되고 가장 기억에 남습니다.`,
   '강민서': `어떻게 하면 제 생각을 다른 사람에게 설득력 있으면서도 재치 있게 표현할 수 있을지에 대한 고민을 많이 했던 것 같습니다. 과정에서 크고 작은 시행착오도 많았지만, 오히려 그 순간들이 저를 성장시키고 작품의 완성도를 높이는 계기가 되었다고 생각합니다.`,
@@ -715,10 +731,8 @@ export const interview2ByName: Record<string, string | string[]> = {
   '김가현': `표현 방식과 매체를 어떻게 풀어내면 좋을지에 관해 많은 고민을 했지만, 그 과정에서 제 디자인 성향을 다시 돌아볼 수 있었던 순간이 기억에 남습니다.`,
   '김다예': `내 작품이 어떻게 해야 새로운 방향을 가지고 나아갈 수 있는지에 대한 고민을 끝없이 했었습니다. 작품을 진행하면서 디자인 표현 방식에 대해 많이 헤매고 고민했던 순간들이 있었습니다.`,
   '김미연': `‘지오센트 31’이 나오기까지 우여곡절이 많았어요. 1학기 말, 결국 ‘돌’이라는 키워드만 남겨두고 이전 프로젝트를 완전히 접어야 했거든요. 할머니 댁에서 모두가 잠든 밤, 머리를 부여잡고 막막함 속에 고민하던 순간이 아직도 기억에 남아요.`,
-  '김민지': [
-    `두 과목 모두 UX/UI 디자인으로 진행하다 보니, UX 단계에서 UI 단계로 넘어갈 때 기획과 디자인이 따로 움직이지는 않는지 고민했습니다. 또한 UI 디자인에서 사용자가 큰 어려움 없이 직관적으로 쓸 수 있도록 사용성 측면에서도 많은 고민을 했습니다.`,
-    `타이포를 로고처럼 하나하나 만들며 단어만으로 다양한 뜻을 전하려 고민했다. 그 결과물이 실제로 사람들 반응 속에서 내 의도에 맞게 읽히던 순간이 가장 기억에 남았다.`
-  ],
+  '김민지 (202120222)': `두 과목 모두 UX/UI 디자인으로 진행하다 보니, UX 단계에서 UI 단계로 넘어갈 때 기획과 디자인이 따로 움직이지는 않는지 고민했습니다. 또한 UI 디자인에서 사용자가 큰 어려움 없이 직관적으로 쓸 수 있도록 사용성 측면에서도 많은 고민을 했습니다.`,
+  '김민지 (202120221)': `타이포를 로고처럼 하나하나 만들며 단어만으로 다양한 뜻을 전하려 고민했다. 그 결과물이 실제로 사람들 반응 속에서 내 의도에 맞게 읽히던 순간이 가장 기억에 남았다.`,
   '김서영': `졸업작품을 준비하며 가장 고민했던 것은 주제 선정이었습니다. 나에게 의미 있는 주제이면서도 멋진 결과물을 만들어낼 수 있을지를 깊이 고민했고, 대학생으로서 할 수 있는 범위와 역량을 고려해, 그에 맞는 주제를 찾고자 많은 시간을 들였습니다.`,
   '김서진': `작업의 첫 발을 내딛는 주제 선정에 대한 고민이 가장 큰 부분을 차지했던 것 같습니다. 휴식하며 생각했던 점이나 자주 보던 컨텐츠 등 사소하게만 느껴졌던 일상의 것들이 중요해질 수 있다는 점을 교수님과 지인 분들꼐 도움을 받으며 깨달았습니다. `,
   '김세미': `주제 선정부터 실제 구현까지 수많은 고민이 있었지만, 과정 속에서의 성취의 순간이 가장 깊이 기억에 남습니다.`,
@@ -770,10 +784,8 @@ export const interview2ByName: Record<string, string | string[]> = {
   '이은솔': `작업 방향에 대해서 수없이 고민했지만, 여러 피드백을 발판 삼아 포기하지 않고 끝내 극복할 수 있었습니다.`,
   '이은진': `동화책 제본이 저에게는 가장 큰 고민이었습니다. 인쇄소에 직접 방문해 본 적이 없었기 때문입니다. 하지만 그러한 걱정 때문에 관련 자료를 더 찾아보고, 직접 상담과 견적을 거쳐 실제 주문까지 해보면서 좋은 결과물을 받아본 경험이 저에게는 막연한 두려움을 극복한 의미 있는 경험이었습니다.`,
   '이정오': `HUMON 도감에서는 인간 유형의 특징을 어떻게 직관적으로 표현할지, 워치페이스에서는 24절기를 사람들이 공감할 수 있게 담는 방법을 가장 고민했습니다.`,
-  '이지수': [
-    ` 처음으로 제 작업이 어떻게 보일지 생각하는 시간을 가지며 그러한 과정 자체가 저를 한 단계 더 성장시키고 있는 것이라고 최근엔 생각이 들었습니다. 특히 직접 인쇄소에 방문해 작품에 어울리는 종이의 질감을 손으로 고르던 순간이 가장 기억에 남습니다.`,
-    `작업이 '심심하지 않을까' 하는 고민과 매체별 표현의 한계가 다른 점이 가장 고민스러웠습니다. 이를 극복하는 과정에서 단기간에 크게 성장할 수 있었기에 가장 기억에 남는 경험입니다.`
-  ],
+  '이지수 (202140343)': ` 처음으로 제 작업이 어떻게 보일지 생각하는 시간을 가지며 그러한 과정 자체가 저를 한 단계 더 성장시키고 있는 것이라고 최근엔 생각이 들었습니다. 특히 직접 인쇄소에 방문해 작품에 어울리는 종이의 질감을 손으로 고르던 순간이 가장 기억에 남습니다.`,
+  '이지수 (202120344)': `작업이 '심심하지 않을까' 하는 고민과 매체별 표현의 한계가 다른 점이 가장 고민스러웠습니다. 이를 극복하는 과정에서 단기간에 크게 성장할 수 있었기에 가장 기억에 남는 경험입니다.`,
   '이진영': `작업자의 시선에 머무르지 않고, 소비자이자 관찰자의 입장에서 제 작품을 어떻게 이해시킬 수 있을지 끊임없이 고민했던 순간이 기억에 남습니다.`,
   '이채영': `제 프로젝트에서는 인터뷰가 필수적이어서 많은 분들을 만나 이야기를 나눴습니다. 한 사람 한 사람의 경험과 목소리를 듣는 과정은 특별한 시간이었고, 이전에는 해보지 못했던 일을 하면서 사람과 이야기를 대하는 감각이 한층 깊어지는 경험이었습니다.`,
   '이현영': `싹둑 레이브' 작업을 하다가 쉬는 날에 디제잉 원데이 클래스를 직접 들어보았는데요. 와, 디제잉 너무 재밌던데요? 직접 컨트롤러를 다루면서 흥겨운 음악을 들으니 그 순간만큼은 졸작 스트레스에서 벗어날 수 있었어요. 졸업하고 진짜 취미로 배울까 봐요!`,
@@ -793,10 +805,8 @@ export const interview2ByName: Record<string, string | string[]> = {
   '조은희': `처음에는 막막했던 시안이 수정과 실험을 거치며 점차 완성되어 갈 때, 성취감과 안도감이 크게 남았습니다.`,
   '지예린': `두 작품을 진행하면서 이 디자인이 사람들의 공감을 어떻게 이끌어낼 수 있을지 끊임없이 고민했던 순간들이 가장 선명하게 기억에 남습니다.`,
   '천다영': `디자인 타겟 설정과 방향을 잡는 과정에서 많은 고민과 세심한 점검이 필요해 어려움이 있었습니다. 폭우가 내리던 날 직접 서울 인쇄소를 찾아갔던 기억도 선명한데, 그때 예상보다 만족스러운 결과물이 나온 것이 특히 기억에 남습니다.`,
-  '최지윤': [
-    `‘졸업작품이니까 뭔가 있어 보여야 하고 엄청난 의미 있는걸 해야 하지 않을까’ 하는 생각에 주제를 정하는 데만 꽤 오랜 시간이 걸렸고 고민도 많이 했었던게 가장 기억에 남습니다.`,
-    `무거운 주제를 어떻게 유쾌하게 풀어낼지 가장 고민했습니다. 웃음 속에서도 관람자가 다시 생각해보는 순간이 특히 기억에 남습니다.`
-  ],
+  '최지윤 (202020381)': `‘졸업작품이니까 뭔가 있어 보여야 하고 엄청난 의미 있는걸 해야 하지 않을까’ 하는 생각에 주제를 정하는 데만 꽤 오랜 시간이 걸렸고 고민도 많이 했었던게 가장 기억에 남습니다.`,
+  '최지윤 (202120393)': `무거운 주제를 어떻게 유쾌하게 풀어낼지 가장 고민했습니다. 웃음 속에서도 관람자가 다시 생각해보는 순간이 특히 기억에 남습니다.`,
   '한유진': `작품이 마음에 들게 완성되었을 때 느낀 안도감과 뿌듯함이 가장 기억에 남습니다.`,
   '허윤서': `학교에서 친구들과 밤새 작업했던 순간이 가장 기억에 남습니다.`,
   '홍남영': `전시 공간을 기획하는 것은 거의 처음이었기에, 주제 확정 후 전시를 처음부터 구성하는 것이 가장 큰 과제였습니다. 어떻게 해야 작업물과 주제를 더 돋보이게 하고 전시 공간 자체를 매력적으로 연출할 수 있을지 고민했었습니다.`,
