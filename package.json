@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3002 -H 0.0.0.0",
-    "dev:lan": "IP=$(ipconfig getifaddr en0 || ipconfig getifaddr en1); echo \"Network URL: http://$IP:3002\"; next dev -p 3002 -H 0.0.0.0",
+    "dev": "next dev -p 3030 -H 0.0.0.0",
+    "dev:lan": "IP=$(ipconfig getifaddr en0 || ipconfig getifaddr en1); echo \"Network URL: http://$IP:3030\"; next dev -p 3030 -H 0.0.0.0",
     "build": "next build",
     "generate:profiles": "node scripts/generate-profile-manifest.mjs",
     "generate:profiles:s3": "PROFILE_IMAGE_SOURCE=s3 node scripts/generate-profile-manifest.mjs",
-    "start": "next start -p 3002 -H 0.0.0.0",
-    "start:lan": "IP=$(ipconfig getifaddr en0 || ipconfig getifaddr en1); echo \"Network URL: http://$IP:3002\"; next start -p 3002 -H 0.0.0.0",
+    "start": "next start -p 3030 -H 0.0.0.0",
+    "start:lan": "IP=$(ipconfig getifaddr en0 || ipconfig getifaddr en1); echo \"Network URL: http://$IP:3030\"; next start -p 3030 -H 0.0.0.0",
     "lint": "next lint"
   },
   "dependencies": {

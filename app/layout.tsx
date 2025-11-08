@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 export const metadata: Metadata = {
   title: '2025 졸업 전시 온라인 플랫폼',
   description: '2025 졸업 전시 작품을 온라인에서 만나보세요.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({
@@ -18,10 +21,14 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="any" />
         <link rel="preconnect" href="https://use.typekit.net" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
         <link rel="preload" href="https://use.typekit.net/yvm1rwe.css" as="style" />
         <link rel="stylesheet" href="https://use.typekit.net/yvm1rwe.css" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
         <script dangerouslySetInnerHTML={{
           __html: `
             (function(d) {

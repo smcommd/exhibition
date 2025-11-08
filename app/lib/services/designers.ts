@@ -2,6 +2,7 @@ import { getSupabaseServerClient } from '@/app/lib/supabase/server'
 import { resolveAssetUrl } from '@/app/lib/utils/asset-url'
 import type { Designer, StudioKey } from '@/app/lib/types'
 import { designers as fallbackDesigners } from '@/app/lib/data/designers'
+import { realStudentData } from '@/app/lib/data/student-data'
 
 type SupabaseDesignerRow = {
   id: number
@@ -22,6 +23,11 @@ type SupabaseDesignerRow = {
   student_number: string | null
 }
 
+const emailByStudentNumber = realStudentData.reduce<Record<string, string>>((acc, student) => {
+  acc[student.studentNumber] = student.email
+  return acc
+}, {})
+
 const DESIGNER_SELECT =
   'id,name,major,studio,profile_image,profile_blur_data_url,profile_width,profile_height,bio,email,instagram,website,interview1,interview2,student_number'
 
@@ -35,6 +41,11 @@ function mapDesigner(row: SupabaseDesignerRow): Designer {
   const defaultStudios: StudioKey[] = ['혁신디자인스튜디오', '융합디자인스튜디오']
   const studios: StudioKey[] = normalizedStudios.length > 1 ? normalizedStudios : defaultStudios
 
+  const normalizedEmail =
+    (row.email && row.email.trim()) ||
+    (row.student_number ? emailByStudentNumber[row.student_number] : '') ||
+    ''
+
   return {
     id: row.id,
     name: row.name,
@@ -45,7 +56,7 @@ function mapDesigner(row: SupabaseDesignerRow): Designer {
     profile_width: row.profile_width ?? undefined,
     profile_height: row.profile_height ?? undefined,
     bio: row.bio || '',
-    email: row.email || '',
+    email: normalizedEmail,
     instagram: row.instagram || undefined,
     website: row.website || undefined,
     interview1: row.interview1 || '',
