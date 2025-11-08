@@ -241,8 +241,8 @@ export const englishNameByStudentNumber: Record<string, string> = {
   '202120338': 'Lee Yujin',
   '202220330': 'Lee EunSol',
   '201920265': 'Lee Eunjin',
-  '202020319': 'lee jeongoh',
-  '202120343': 'Lee Jisoo',
+  '202020319': 'Lee jeongoh',
+  '202140343': 'Lee Jisoo',
   '202120344': 'Lee Jisoo',
   '202121484': 'Lee Jinyoung',
   '202120347': 'Lee Chaeyoung',
@@ -280,11 +280,11 @@ export const englishNameByStudentNumber: Record<string, string> = {
 // key: 학번, value: 파일명 (public/images/profiles/images 기준)
 export const photoFileByStudentNumber: Record<string, string> = {
   // 이지수 (동명이인)
-  '202120343': '이지수.jpg',
+  '202140343': '이지수.jpg',
   '202120344': '이지수_2.jpg',
   // 최지윤 (동명이인) — 서로 사진 교체
-  '202020381': '최지윤_2.jpg',
-  '202120393': '최지윤.jpg',
+  '202020381': '최지윤.jpg',
+  '202120393': '최지윤_2.jpg',
   // 김민지 (동명이인)
   '202120222': '김민지.jpg',
   '202120221': '김민지_2.jpg',
