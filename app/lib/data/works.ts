@@ -269,9 +269,7 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
   const convergenceSeq: Record<string, number> = {};
 
   inputDesigners.forEach((designer) => {
-    const categories: StudioKey[] = Array.isArray(designer.studios) && designer.studios.length
-      ? designer.studios
-      : ['융합디자인스튜디오', '혁신디자인스튜디오'];
+    const categories: StudioKey[] = ['융합디자인스튜디오', '혁신디자인스튜디오'];
 
     categories.forEach((category) => {
       const projectType = projectTypes[Math.floor(Math.random() * projectTypes.length)];
