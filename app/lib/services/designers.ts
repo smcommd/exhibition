@@ -54,6 +54,10 @@ function mergeDesignersByStudent(designers: Designer[]): Designer[] {
     merged.set(key, {
       ...existing,
       studios: Array.from(studioSet),
+      profile_image: existing.profile_image || designer.profile_image,
+      profile_blur_data_url: existing.profile_blur_data_url || designer.profile_blur_data_url,
+      profile_width: existing.profile_width ?? designer.profile_width,
+      profile_height: existing.profile_height ?? designer.profile_height,
       innovation_thumbnail_path: existing.innovation_thumbnail_path || designer.innovation_thumbnail_path,
       innovation_detail_path: existing.innovation_detail_path || designer.innovation_detail_path,
       convergence_thumbnail_path: existing.convergence_thumbnail_path || designer.convergence_thumbnail_path,
