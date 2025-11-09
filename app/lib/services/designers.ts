@@ -4,7 +4,7 @@ import { getSupabaseServerClient } from '@/app/lib/supabase/server'
 import { resolveAssetUrl } from '@/app/lib/utils/asset-url'
 import type { Designer, StudioKey } from '@/app/lib/types'
 import { designers as fallbackDesigners } from '@/app/lib/data/designers'
-import { realStudentData } from '@/app/lib/data/student-data'
+import { getProfileImageMeta, realStudentData } from '@/app/lib/data/student-data'
 
 type SupabaseDesignerRow = {
   id: number
@@ -79,15 +79,21 @@ function mapDesigner(row: SupabaseDesignerRow): Designer {
     (row.student_number ? emailByStudentNumber[row.student_number] : '') ||
     ''
 
+  const fallbackProfileMeta = getProfileImageMeta(row.student_number || undefined, row.name)
+  const resolvedProfileImage = resolveAssetUrl(row.profile_image || '') || fallbackProfileMeta.src
+  const resolvedProfileWidth = row.profile_width ?? fallbackProfileMeta.width
+  const resolvedProfileHeight = row.profile_height ?? fallbackProfileMeta.height
+  const resolvedBlurData = row.profile_blur_data_url || fallbackProfileMeta.blurDataURL
+
   return {
     id: row.id,
     name: row.name,
     major: row.major || '커뮤니케이션디자인',
     studios,
-    profile_image: resolveAssetUrl(row.profile_image || ''),
-    profile_blur_data_url: row.profile_blur_data_url || undefined,
-    profile_width: row.profile_width ?? undefined,
-    profile_height: row.profile_height ?? undefined,
+    profile_image: resolvedProfileImage,
+    profile_blur_data_url: resolvedBlurData || undefined,
+    profile_width: resolvedProfileWidth || undefined,
+    profile_height: resolvedProfileHeight || undefined,
     bio: row.bio || '',
     email: normalizedEmail,
     instagram: row.instagram || undefined,
