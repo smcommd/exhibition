@@ -70,8 +70,13 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
   const profileImage = designer
     ? (() => {
         const fallbackMeta = getProfileImageMeta(designer.student_number, designer.name)
+        const fallbackPreferred = fallbackMeta.src
+        const primarySrc = designer.profile_image && designer.profile_image.trim().length > 0
+          ? designer.profile_image
+          : fallbackPreferred
+        const finalSrc = designer.student_number === '202120343' ? fallbackPreferred : primarySrc
         return {
-          src: designer.profile_image || fallbackMeta.src,
+          src: finalSrc,
           blurDataURL: designer.profile_blur_data_url || fallbackMeta.blurDataURL,
         }
       })()
