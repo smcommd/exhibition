@@ -27,10 +27,6 @@ type SupabaseDesignerRow = {
   innovation_detail_path?: string | null
   convergence_thumbnail_path?: string | null
   convergence_detail_path?: string | null
-  innovation_video_url?: string | null
-  innovation_prototype_url?: string | null
-  convergence_video_url?: string | null
-  convergence_prototype_url?: string | null
 }
 
 const emailByStudentNumber = realStudentData.reduce<Record<string, string>>((acc, student) => {
@@ -39,7 +35,7 @@ const emailByStudentNumber = realStudentData.reduce<Record<string, string>>((acc
 }, {})
 
 const DESIGNER_SELECT =
-  'id,name,major,studio,profile_image,profile_blur_data_url,profile_width,profile_height,bio,email,instagram,website,interview1,interview2,student_number,innovation_thumbnail_path,innovation_detail_path,convergence_thumbnail_path,convergence_detail_path,innovation_video_url,innovation_prototype_url,convergence_video_url,convergence_prototype_url'
+  'id,name,major,studio,profile_image,profile_blur_data_url,profile_width,profile_height,bio,email,instagram,website,interview1,interview2,student_number,innovation_thumbnail_path,innovation_detail_path,convergence_thumbnail_path,convergence_detail_path'
 
 function mergeDesignersByStudent(designers: Designer[]): Designer[] {
   const merged = new Map<string, Designer>()
@@ -111,10 +107,6 @@ function mapDesigner(row: SupabaseDesignerRow): Designer {
     convergence_detail_path: row.convergence_detail_path
       ? resolveAssetUrl(row.convergence_detail_path)
       : undefined,
-    innovation_video_url: row.innovation_video_url || undefined,
-    innovation_prototype_url: row.innovation_prototype_url || undefined,
-    convergence_video_url: row.convergence_video_url || undefined,
-    convergence_prototype_url: row.convergence_prototype_url || undefined,
   }
 }
 

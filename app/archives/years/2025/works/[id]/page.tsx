@@ -5,25 +5,6 @@ import { fetchWorks } from '@/app/lib/services/works'
 import { fetchDesignerById } from '@/app/lib/services/designers'
 import { englishNameByStudentNumber } from '@/app/lib/data/student-data'
 
-function getYouTubeEmbedUrl(url?: string): string | null {
-  if (!url) return null
-  try {
-    const parsed = new URL(url.trim())
-    const host = parsed.hostname.replace(/^www\./, '')
-    if (host === 'youtu.be') {
-      const id = parsed.pathname.replace(/^\//, '')
-      return id ? `https://www.youtube.com/embed/${id}?rel=0` : null
-    }
-    if (host.endsWith('youtube.com')) {
-      const id = parsed.searchParams.get('v') || parsed.pathname.split('/').pop()
-      return id ? `https://www.youtube.com/embed/${id}?rel=0` : null
-    }
-  } catch (error) {
-    return null
-  }
-  return null
-}
-
 function seededRandom(seed: number): () => number {
   let value = seed % 2147483647
   if (value <= 0) value += 2147483646
@@ -105,7 +86,6 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
     )
   }
   const roman = designer.student_number ? englishNameByStudentNumber[designer.student_number] : undefined
-  const videoEmbedUrl = getYouTubeEmbedUrl(work.videoUrl)
 
   return (
     <div className="min-h-screen bg-white">
@@ -130,19 +110,6 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
             ) : (
               <div className="w-full bg-[repeating-linear-gradient(45deg,#efefef_0,#efefef_24px,#f8f8f8_24px,#f8f8f8_48px)] border border-gray-200 min-h-[720px]" />
             )}
-            {videoEmbedUrl ? (
-              <div className="w-full">
-                <div className="relative w-full overflow-hidden rounded-lg border border-gray-200 bg-black pt-[56.25%]">
-                  <iframe
-                    src={videoEmbedUrl}
-                    title={`${work.title} 영상`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                    className="absolute inset-0 h-full w-full"
-                  />
-                </div>
-              </div>
-            ) : null}
           </div>
 
           {/* Right: meta and description */}
@@ -160,17 +127,6 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
               {work.description}
             </p>
             <div className="pretendard-font text-[18px] font-bold text-gray-700">{work.category}</div>
-            {work.prototypeUrl ? (
-              <a
-                href={work.prototypeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex mt-6 items-center gap-2 rounded-full border border-black px-5 py-2 text-sm font-semibold hover:bg-black hover:text-white transition-colors"
-              >
-                프로토타입 체험하기
-                <span aria-hidden="true">↗</span>
-              </a>
-            ) : null}
           </aside>
         </div>
 

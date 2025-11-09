@@ -21,10 +21,6 @@ export interface Designer {
   innovation_detail_path?: string;
   convergence_thumbnail_path?: string;
   convergence_detail_path?: string;
-  innovation_video_url?: string;
-  innovation_prototype_url?: string;
-  convergence_video_url?: string;
-  convergence_prototype_url?: string;
 }
 
 // 작품 타입 정의
@@ -42,8 +38,6 @@ export interface Work {
   projectType: string; // 프로젝트 유형 (브랜딩, UI/UX, 편집, 타이포그래피 등)
   tools?: string[]; // 사용 도구 (Photoshop, Illustrator, Figma 등)
   year: number;
-  videoUrl?: string;
-  prototypeUrl?: string;
 }
 
 // 교수 타입 정의
