@@ -306,12 +306,13 @@ export function getProfileImageMeta(studentNumber: string | undefined, fallbackN
   if (manifestEntry) {
     return {
       ...manifestEntry,
-      src: resolveAssetUrl(manifestEntry.src),
+      src: manifestEntry.src,
     }
   }
+  const localPath = `/images/profiles/images/${encodeURIComponent(normalized)}`
   return {
     ...DEFAULT_PROFILE_META,
-    src: resolveAssetUrl(`/images/profiles/images/${encodeURIComponent(normalized)}`),
+    src: localPath,
   }
 }
 
