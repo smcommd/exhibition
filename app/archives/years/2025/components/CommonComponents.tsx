@@ -53,7 +53,7 @@ export type HeroVerticalTextProps = {
 export const STYLES = {
   mainTitle: {
     fontSize: scalePx(48),
-    fontFamily: '"rixdongnimgothic-pro", sans-serif',
+    fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
     fontWeight: "normal",
     letterSpacing: "-0.02em",
     lineHeight: "1.27",
@@ -76,7 +76,7 @@ export const STYLES = {
   },
   roleTitle: {
     fontSize: scalePx(20),
-    fontFamily: '"rixdongnimgothic-pro", sans-serif',
+    fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
     fontWeight: "400",
     lineHeight: scalePx(33.3),
     whiteSpace: "nowrap" as const,
@@ -86,7 +86,7 @@ export const STYLES = {
   personName: {
     color: "#3D3D3D",
     fontSize: scalePx(18),
-    fontFamily: "RixDongnimGothic_Pro",
+    fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
     fontWeight: "400",
     lineHeight: scalePx(33.3),
     whiteSpace: "nowrap" as const,
@@ -96,7 +96,7 @@ export const STYLES = {
   professorName: {
     color: "#3D3D3D",
     fontSize: scalePx(19.8),
-    fontFamily: "RixDongnimGothic_Pro",
+    fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
     fontWeight: "400",
     lineHeight: scalePx(33.3),
     whiteSpace: "nowrap" as const,
@@ -108,11 +108,11 @@ export const STYLES = {
 /** Tailwind utility counterparts (for JSX className) */
 export const styles = {
   mainTitle:
-    'text-[48px] leading-[1.27] tracking-[-0.02em] font-[400] font-["rixdongnimgothic-pro",_sans-serif]',
+    'text-[48px] leading-[1.27] tracking-[-0.02em] font-[400] font-["rixdongnimgothic-pro","Noto_Sans_KR",sans-serif]',
   subtitle: "text-[22px] leading-[34.2px] mb-[66.6px]",
   body: "text-[22px] font-[500]",
   roleTitle:
-    'text-[20px] leading-[33.3px] tracking-[-0.02em] font-[400] font-["rixdongnimgothic-pro",_sans-serif] whitespace-nowrap',
+    'text-[20px] leading-[33.3px] tracking-[-0.02em] font-[400] font-["rixdongnimgothic-pro","Noto_Sans_KR",sans-serif] whitespace-nowrap',
   personName:
     "text-[#3D3D3D] text-[18px] leading-[33.3px] tracking-[-0.02em] font-[400] whitespace-nowrap text-right",
   sectionLabel: "text-[24px]",

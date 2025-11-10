@@ -50,7 +50,7 @@ const PROFESSOR_BUTTON_STYLE = (active: boolean): CSSProperties => ({
 const PROFESSOR_TEXT_STYLE = (active: boolean): CSSProperties => ({
   color: active ? "#000000" : "#C1C1C1",
   fontSize: 15,
-  fontFamily: "rixdongnimgothic-pro, sans-serif",
+  fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
   fontWeight: 400,
   lineHeight: "24px",
   whiteSpace: "nowrap",

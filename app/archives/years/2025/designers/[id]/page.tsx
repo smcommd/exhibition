@@ -121,13 +121,13 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
                   <span
                     className="leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
+                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '33px', fontWeight: 400 }}
                   >
                     {designer.name}
                   </span>
                   <span
                     className="text-black leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '22px', fontWeight: 700 }}
+                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '22px', fontWeight: 700 }}
                   >
                     {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
                   </span>
@@ -163,13 +163,13 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                   <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
                     <span
                       className="leading-tight whitespace-nowrap"
-                      style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
+                      style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '33px', fontWeight: 400 }}
                     >
                       {designer.name}
                     </span>
                   <span
                     className="text-black leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontWeight: 400, fontSize: 'clamp(14px, 2.4vw, 18px)' }}
+                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontWeight: 400, fontSize: 'clamp(14px, 2.4vw, 18px)' }}
                   >
                     {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
                   </span>
@@ -185,7 +185,7 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center h-[32px] px-2 -rotate-1"
-                      style={{ background: '#DDFF8E', fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
+                      style={{ background: '#DDFF8E', fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
                     >
                       @{designer.instagram}
                     </a>
@@ -199,7 +199,7 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                     <a
                       href={`mailto:${designer.email}`}
                       className="inline-flex items-center h-[32px] px-2 -rotate-1"
-                      style={{ background: '#B5EEFF', fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
+                      style={{ background: '#B5EEFF', fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
                     >
                       {designer.email}
                     </a>

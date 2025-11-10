@@ -84,7 +84,7 @@ export default function Navigation() {
             isArchive ? 'bg-[#B5EEFF]' : 'bg-[#DFDFDF]'
           } hover:bg-[#DDFF8E]`}
           style={{
-            fontFamily: '"rixdongnimgothic-pro", sans-serif',
+            fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
             fontSize: 'clamp(18px, 5vw, 32px)',
             width: 'clamp(118px, 30vw, 170px)',
             height: 'clamp(34px, 9vw, 40px)',

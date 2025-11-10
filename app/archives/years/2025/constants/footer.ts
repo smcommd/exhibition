@@ -69,7 +69,7 @@ export const FOOTER_STYLES = {
     position: 'absolute' as const,
     color: FOOTER_CONSTANTS.COLORS.TEXT,
     fontSize: '22px',
-    fontFamily: '"rixdongnimgothic-pro", sans-serif',
+    fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
     fontWeight: '400',
     lineHeight: '1.5',
     wordWrap: 'break-word' as const
