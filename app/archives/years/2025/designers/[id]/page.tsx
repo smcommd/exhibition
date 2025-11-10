@@ -121,13 +121,20 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
                   <span
                     className="leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '33px', fontWeight: 400 }}
+                    style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
                   >
                     {designer.name}
                   </span>
                   <span
-                    className="text-black leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '22px', fontWeight: 700 }}
+                    className="text-black leading-tight mx-auto"
+                    style={{
+                      fontFamily: '"rixdongnimgothic-pro", sans-serif',
+                      fontSize: '22px',
+                      fontWeight: 700,
+                      whiteSpace: 'normal',
+                      wordBreak: 'break-word',
+                      maxWidth: '200px',
+                    }}
                   >
                     {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
                   </span>
@@ -163,13 +170,20 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                   <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
                     <span
                       className="leading-tight whitespace-nowrap"
-                      style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '33px', fontWeight: 400 }}
+                      style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
                     >
                       {designer.name}
                     </span>
                   <span
-                    className="text-black leading-tight whitespace-nowrap"
-                    style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontWeight: 400, fontSize: 'clamp(14px, 2.4vw, 18px)' }}
+                    className="text-black leading-tight mx-auto"
+                    style={{
+                      fontFamily: '"rixdongnimgothic-pro", sans-serif',
+                      fontWeight: 400,
+                      fontSize: 'clamp(14px, 2.4vw, 18px)',
+                      whiteSpace: 'normal',
+                      wordBreak: 'break-word',
+                      maxWidth: '220px',
+                    }}
                   >
                     {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
                   </span>
@@ -185,7 +199,7 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center h-[32px] px-2 -rotate-1"
-                      style={{ background: '#DDFF8E', fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
+                      style={{ background: '#DDFF8E', fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
                     >
                       @{designer.instagram}
                     </a>
@@ -199,7 +213,7 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                     <a
                       href={`mailto:${designer.email}`}
                       className="inline-flex items-center h-[32px] px-2 -rotate-1"
-                      style={{ background: '#B5EEFF', fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
+                      style={{ background: '#B5EEFF', fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '16px', fontWeight: 700, transformOrigin: 'center' }}
                     >
                       {designer.email}
                     </a>
@@ -227,14 +241,14 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
         <div className="grid grid-cols-1 min-[900px]:grid-cols-2 gap-10 min-[900px]:gap-12">
           <div>
             <div className="mb-3">
-              <span className="inline-flex items-center px-2 py-0.5 -rotate-1" style={{ background: '#DDFF8E', border: '1px solid #000' }}>[ 1 ]</span>
+              <span className="inline-flex items-center px-2 py-0.5 -rotate-1" style={{ background: '#DDFF8E' }}>[ 1 ]</span>
             </div>
             <h3 className="text-lg min-[900px]:text-xl font-normal mb-3">4년동안 디자인 전공을 하며 생긴 새로운 습관이나 태도가 있다면 무엇인가요?</h3>
             <p className="pretendard-font text-gray-700 leading-relaxed break-keep whitespace-pre-line max-w-[68ch] min-[900px]:max-w-[72ch]" style={{ wordBreak: 'keep-all' }}>{formatBio(designer.interview1)}</p>
           </div>
           <div>
             <div className="mb-3">
-              <span className="inline-flex items-center px-2 py-0.5 -rotate-1" style={{ background: '#DDFF8E', border: '1px solid #000' }}>[ 2 ]</span>
+              <span className="inline-flex items-center px-2 py-0.5 -rotate-1" style={{ background: '#DDFF8E' }}>[ 2 ]</span>
             </div>
             <h3 className="text-lg min-[900px]:text-xl font-normal mb-3">졸업 작품 작업을 하면서 가장 고민했던 점이나 기억에 남는 순간이 있다면 무엇인가요?</h3>
             <p className="pretendard-font text-gray-700 leading-relaxed break-keep whitespace-pre-line max-w-[68ch] min-[900px]:max-w-[72ch]" style={{ wordBreak: 'keep-all' }}>{formatBio(designer.interview2)}</p>
@@ -264,8 +278,8 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                   ) : null}
                 </div>
                 <div className="mt-3">
-                  <div className="text-sm text-black leading-tight">{work.title}</div>
-                  <div className="text-xs text-gray-600 pretendard-font">{work.category} | {work.professor}</div>
+                  <div className="pretendard-font font-bold text-[20px] text-gray-900">{work.title}</div>
+                  <div className="pretendard-font text-[16px] text-gray-700">{work.category}</div>
                 </div>
               </Link>
             ))}

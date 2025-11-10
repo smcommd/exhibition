@@ -109,7 +109,7 @@ export default function DesignersClient({ designers }: DesignersClientProps) {
                         ? 'bg-[#2F2F2F] border-[#2F2F2F] text-white'
                         : 'bg-white border-[#E5E5E5] text-[#9F9F9F]')
                 ].join(' ')}
-                style={{ fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif', fontWeight: 400 }}
+                style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontWeight: 400 }}
               >
                 {key === 'ALL' ? 'All' : key}
               </button>

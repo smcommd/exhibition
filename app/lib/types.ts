@@ -38,6 +38,9 @@ export interface Work {
   projectType: string; // 프로젝트 유형 (브랜딩, UI/UX, 편집, 타이포그래피 등)
   tools?: string[]; // 사용 도구 (Photoshop, Illustrator, Figma 등)
   year: number;
+  videos?: string[];
+  prototypes?: string[];
+  usesAI?: boolean;
 }
 
 // 교수 타입 정의

@@ -6,6 +6,7 @@ import {
   innovationDescriptionsByName,
   innovationDescriptionsByStudentNumber
 } from './innovation-descriptions';
+import { workMediaByStudentNumber } from './work-media';
 
 // 작품 제목 템플릿
 const titlePrefixes = ['새로운', '변화하는', '연결된', '지속가능한', '미래의', '공감하는', '소통하는', '창의적인', '실험적인', '혁신적인'];
@@ -342,6 +343,9 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
         convergenceSeq[designer.name] = seq + 1;
       }
       const isInnovation = category === '혁신디자인스튜디오';
+      const studentNumber = designer.student_number;
+      const mediaEntry = studentNumber ? workMediaByStudentNumber[studentNumber] : undefined;
+      const studioMedia = mediaEntry ? (isInnovation ? mediaEntry.innovation : mediaEntry.convergence) : undefined;
       const providedThumbnail = isInnovation
         ? designer.innovation_thumbnail_path
         : designer.convergence_thumbnail_path;
@@ -366,6 +370,9 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
         projectType,
         tools: toolsOptions[toolsIndex],
         year: 2025,
+        videos: studioMedia?.videos,
+        prototypes: studioMedia?.prototypes,
+        usesAI: studioMedia?.usesAI,
       });
 
       workId++;

@@ -39,6 +39,49 @@ interface WorkDetailPageProps {
   }
 }
 
+type EmbedInfo =
+  | {
+      type: 'youtube' | 'vimeo'
+      embedUrl: string
+    }
+  | null
+
+function getVideoEmbedInfo(url: string): EmbedInfo {
+  try {
+    const parsed = new URL(url)
+    const host = parsed.hostname.replace(/^www\./, '')
+
+    if (host.includes('youtu.be')) {
+      const videoId = parsed.pathname.slice(1)
+      return videoId ? { type: 'youtube', embedUrl: `https://www.youtube.com/embed/${videoId}` } : null
+    }
+
+    if (host.includes('youtube.com')) {
+      if (parsed.pathname === '/watch') {
+        const id = parsed.searchParams.get('v')
+        return id ? { type: 'youtube', embedUrl: `https://www.youtube.com/embed/${id}` } : null
+      }
+      if (parsed.pathname.startsWith('/shorts/')) {
+        const id = parsed.pathname.split('/')[2]
+        return id ? { type: 'youtube', embedUrl: `https://www.youtube.com/embed/${id}` } : null
+      }
+      if (parsed.pathname.startsWith('/embed/')) {
+        return { type: 'youtube', embedUrl: url }
+      }
+    }
+
+    if (host.includes('vimeo.com')) {
+      const segments = parsed.pathname.split('/').filter(Boolean)
+      const videoId = segments[segments.length - 1]
+      return videoId ? { type: 'vimeo', embedUrl: `https://player.vimeo.com/video/${videoId}` } : null
+    }
+  } catch {
+    return null
+  }
+
+  return null
+}
+
 export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
   const workId = parseInt(params.id)
   const allWorks = await fetchWorks()
@@ -93,23 +136,58 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
         <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[minmax(0,720px)_minmax(0,1fr)] gap-10">
           {/* Left: main visual */}
           <div className="order-2 lg:order-1 space-y-8">
-            {work.images.length ? (
-              work.images.map((src, idx) => (
-                <div
-                  key={`${src}-${idx}`}
-                  className="w-full border border-gray-200 bg-gray-100"
-                >
-                  <img
-                    src={src}
-                    alt={`${work.title} 상세 이미지 ${idx + 1}`}
-                    loading={idx === 0 ? 'eager' : 'lazy'}
-                    className="block w-full h-auto"
-                  />
-                </div>
-              ))
-            ) : (
-              <div className="w-full bg-[repeating-linear-gradient(45deg,#efefef_0,#efefef_24px,#f8f8f8_24px,#f8f8f8_48px)] border border-gray-200 min-h-[720px]" />
-            )}
+            <div className="space-y-6">
+              {work.images.length ? (
+                work.images.map((src, idx) => (
+                  <div
+                    key={`${src}-${idx}`}
+                    className="w-full border border-gray-200 bg-gray-100"
+                  >
+                    <img
+                      src={src}
+                      alt={`${work.title} 상세 이미지 ${idx + 1}`}
+                      loading={idx === 0 ? 'eager' : 'lazy'}
+                      className="block w-full h-auto"
+                    />
+                  </div>
+                ))
+              ) : (
+                <div className="w-full bg-[repeating-linear-gradient(45deg,#efefef_0,#efefef_24px,#f8f8f8_24px,#f8f8f8_48px)] border border-gray-200 min-h-[720px]" />
+              )}
+            </div>
+
+            {work.videos?.length ? (
+              <div className="space-y-4">
+                {work.videos.map((url, idx) => {
+                  const embedInfo = getVideoEmbedInfo(url)
+                  return (
+                    <div key={`${url}-${idx}`} className="space-y-2">
+                      {embedInfo ? (
+                        <div className="aspect-video w-full bg-black overflow-hidden rounded-sm">
+                          <iframe
+                            src={embedInfo.embedUrl}
+                            title={`영상 ${idx + 1}`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="w-full h-full border-0"
+                          />
+                        </div>
+                      ) : null}
+                      {!embedInfo ? (
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rix-font inline-flex items-center text-[14px] text-[#D5B27D] underline underline-offset-4"
+                        >
+                          {work.videos.length > 1 ? `영상 ${idx + 1} 링크 열기` : '영상 링크 열기'}
+                        </a>
+                      ) : null}
+                    </div>
+                  )
+                })}
+              </div>
+            ) : null}
           </div>
 
           {/* Right: meta and description */}
@@ -123,10 +201,35 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
               {designer.name}
               {roman ? <span className="ml-2 text-[#D5B27D] font-bold">{roman}</span> : null}
             </div>
-            <p className="work-description pretendard-font text-[18px] font-medium leading-7 text-gray-700 mb-6">
+            <div className="mb-6">
+              <p className="work-description pretendard-font text-[18px] font-medium leading-7 text-gray-700">
               {work.description}
             </p>
+              {work.usesAI ? (
+                <p className="pretendard-font text-[14px] text-gray-500 mt-2 font-normal">
+                  이 작업은 AI를 사용했습니다.
+                </p>
+              ) : null}
+            </div>
             <div className="pretendard-font text-[18px] font-bold text-gray-700">{work.category}</div>
+            {work.prototypes?.length ? (
+              <div className="mt-6 border-t border-gray-200 pt-6">
+                <ul className="space-y-2">
+                  {work.prototypes.map((url, idx) => (
+                    <li key={`${url}-${idx}`}>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rix-font inline-flex items-center text-[14px] text-black underline underline-offset-4"
+                      >
+                        {work.prototypes.length > 1 ? `프로토타입 ${idx + 1} 보기` : '프로토타입 보기'}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
           </aside>
         </div>
 

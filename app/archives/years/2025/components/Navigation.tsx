@@ -39,7 +39,7 @@ export default function Navigation() {
             isHome ? 'bg-[#B5EEFF]' : 'bg-[#DFDFDF]'
           } hover:bg-[#DDFF8E]`}
           style={{
-            fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
+            fontFamily: '"rixdongnimgothic-pro", sans-serif',
             fontSize: 'clamp(18px, 5vw, 32px)',
             width: 'clamp(92px, 24vw, 132px)',
             height: 'clamp(34px, 9vw, 40px)',
@@ -54,7 +54,7 @@ export default function Navigation() {
             isWorks ? 'bg-[#B5EEFF]' : 'bg-[#DFDFDF]'
           } hover:bg-[#DDFF8E]`}
           style={{
-            fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
+            fontFamily: '"rixdongnimgothic-pro", sans-serif',
             fontSize: 'clamp(18px, 5vw, 32px)',
             width: 'clamp(98px, 26vw, 140px)',
             height: 'clamp(34px, 9vw, 40px)',
@@ -69,7 +69,7 @@ export default function Navigation() {
             isDesigners ? 'bg-[#B5EEFF]' : 'bg-[#DFDFDF]'
           } hover:bg-[#DDFF8E]`}
           style={{
-            fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
+            fontFamily: '"rixdongnimgothic-pro", sans-serif',
             fontSize: 'clamp(18px, 5vw, 32px)',
             width: 'clamp(130px, 34vw, 188px)',
             height: 'clamp(34px, 9vw, 40px)',
@@ -84,7 +84,7 @@ export default function Navigation() {
             isArchive ? 'bg-[#B5EEFF]' : 'bg-[#DFDFDF]'
           } hover:bg-[#DDFF8E]`}
           style={{
-            fontFamily: '"rixdongnimgothic-pro", "Noto Sans KR", sans-serif',
+            fontFamily: '"rixdongnimgothic-pro", sans-serif',
             fontSize: 'clamp(18px, 5vw, 32px)',
             width: 'clamp(118px, 30vw, 170px)',
             height: 'clamp(34px, 9vw, 40px)',
@@ -101,7 +101,7 @@ export default function Navigation() {
         aria-label="Open menu"
         aria-expanded={open}
         aria-controls="mobile-menu"
-        className={`nav-hamburger hidden ${open ? 'open' : ''}`}
+        className={`nav-hamburger ${open ? 'open' : ''}`}
         onClick={() => setOpen((v) => !v)}
       >
         <span className="sr-only">Open menu</span>

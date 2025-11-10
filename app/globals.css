@@ -17,7 +17,7 @@
   }
 
   * {
-    font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif;
+    font-family: "rixdongnimgothic-pro", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -28,7 +28,7 @@
 
   body {
     @apply bg-white text-primary-900 antialiased;
-    font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif;
+    font-family: "rixdongnimgothic-pro", sans-serif;
     font-weight: 400;
   }
 
@@ -178,6 +178,10 @@
     }
   }
 
+  .nav-hamburger {
+    display: none;
+  }
+
   /* Navigation mobile behaviour for small screens */
   @media (max-width: 600px) {
     body {
@@ -244,7 +248,7 @@
     .nav-overlay.open .nav-panel { transform: translateX(0); }
     .nav-close { position: absolute; top: 6px; right: 8px; font-size: 18px; background: none; border: none; cursor: pointer; }
     .nav-list { list-style: none; margin: 10px 0 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
-    .nav-list a { color: #9CA3AF; text-decoration: none; font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif; font-size: 22px; transition: color 160ms ease; }
+    .nav-list a { color: #9CA3AF; text-decoration: none; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 22px; transition: color 160ms ease; }
     .nav-list a:hover { color: #6B7280; text-decoration: none; }
     .nav-list a.active { color: #000 !important; text-decoration: none; }
   }
@@ -263,7 +267,7 @@
 
   /* Force Rix font where needed, and ensure normal weight */
   .rix-font, .rix-font * {
-    font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif !important;
+    font-family: "rixdongnimgothic-pro", sans-serif !important;
     font-weight: 400 !important;
   }
 
