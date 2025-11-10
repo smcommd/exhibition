@@ -150,7 +150,7 @@ export default function WorksPageClient({ works, initialStudio }: WorksPageClien
                   >
                     <Image src={bgImage} alt="" fill priority={isActive} className="object-contain pointer-events-none select-none" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 py-4">
-                      <div className={`text-[20px] font-normal ${isActive ? "text-black" : "text-gray-500"}`}>{info.label}</div>
+                    <div className={`text-[24px] font-normal ${isActive ? "text-black" : "text-gray-500"}`}>{info.label}</div>
                       <div className={`text-sm ${isActive ? "text-black/80" : "text-gray-500"}`}>{info.en}</div>
                     </div>
                   </button>
@@ -191,7 +191,7 @@ export default function WorksPageClient({ works, initialStudio }: WorksPageClien
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filtered.map((w) => (
               <Link key={`${w.category}-${w.id}`} href={`/archives/years/2025/works/${w.id}`} className="group block">
-                <div className="relative aspect-[4/3] w-full rounded-md border border-gray-200 overflow-hidden bg-[repeating-linear-gradient(45deg,#e9e9e9_0px,#e9e9e9_12px,#f6f6f6_12px,#f6f6f6_24px)]">
+                <div className="relative aspect-[4/3] w-full border border-gray-200 overflow-hidden bg-[repeating-linear-gradient(45deg,#e9e9e9_0px,#e9e9e9_12px,#f6f6f6_12px,#f6f6f6_24px)]">
                   {w.thumbnail ? (
                     <Image
                       src={w.thumbnail}

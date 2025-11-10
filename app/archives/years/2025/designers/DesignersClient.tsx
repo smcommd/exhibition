@@ -70,50 +70,56 @@ export default function DesignersClient({ designers }: DesignersClientProps) {
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto py-10 px-5">
-        <div className="flex flex-col gap-6 mb-8">
-          <div className="flex flex-wrap items-end gap-3">
-            <div className="flex flex-col flex-1 min-w-[220px] max-w-full sm:max-w-sm">
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="디자이너 이름 검색"
-                className="w-full bg-transparent placeholder-[#C9C9C9] text-[#4B4B4B] text-[18px] font-medium focus:outline-none"
-                style={{ fontFamily: 'Pretendard, sans-serif' }}
-              />
-              <div className="mt-1 h-[4px] bg-[#333333]" />
+        <div className="flex flex-col gap-4 mb-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
+            <div className="order-1 md:order-2 flex flex-1 flex-col min-w-[280px] w-full md:flex-none md:w-auto md:max-w-md md:ml-auto md:self-end">
+              <div className="flex flex-row items-center gap-3 w-full md:justify-end">
+                <div className="flex flex-col flex-1 md:flex-none md:w-[320px]">
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="디자이너 이름 검색"
+                    className="w-full bg-transparent placeholder-[#C9C9C9] text-[#4B4B4B] text-[18px] font-medium focus:outline-none"
+                    style={{ fontFamily: 'Pretendard, sans-serif' }}
+                  />
+                  <div className="mt-1 h-[4px] bg-[#333333]" />
+                </div>
+                <div className="flex-shrink-0 self-start sm:self-auto md:ml-4">
+                  <button
+                    type="button"
+                    onClick={() => null}
+                    className="px-5 py-2 bg-[#E5E5E5] text-black font-extrabold text-sm rix-font"
+                    style={{ transform: 'rotate(-2deg)' }}
+                  >
+                    검색
+                  </button>
+                </div>
+              </div>
             </div>
-            <button
-              type="button"
-              onClick={() => null}
-              className="px-5 py-2 bg-[#E5E5E5] text-black font-extrabold text-sm"
-              style={{ transform: 'rotate(-2deg)' }}
-            >
-              검색
-            </button>
-          </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            {CHO_FILTERS.map(key => (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setActiveCho(key as any)}
-                className={[
-                  'h-8 min-w-8 px-2 flex items-center justify-center border text-sm transition-colors',
-                  key === 'ALL'
-                    ? (activeCho === 'ALL'
-                        ? 'bg-[#2F2F2F] border-[#2F2F2F] text-[#DDFF8E]'
-                        : 'bg-white border-[#E5E5E5] text-[#9F9F9F]')
-                    : (activeCho === key
-                        ? 'bg-[#2F2F2F] border-[#2F2F2F] text-white'
-                        : 'bg-white border-[#E5E5E5] text-[#9F9F9F]')
-                ].join(' ')}
-                style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontWeight: 400 }}
-              >
-                {key === 'ALL' ? 'All' : key}
-              </button>
-            ))}
+            <div className="order-2 md:order-1 flex flex-wrap items-center gap-2 md:gap-2 md:min-w-[340px]">
+              {CHO_FILTERS.map(key => (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => setActiveCho(key as any)}
+                  className={[
+                    'h-8 min-w-8 px-2 flex items-center justify-center border text-sm transition-colors',
+                    key === 'ALL'
+                      ? (activeCho === 'ALL'
+                          ? 'bg-[#2F2F2F] border-[#2F2F2F] text-[#DDFF8E]'
+                          : 'bg-white border-[#E5E5E5] text-[#9F9F9F]')
+                      : (activeCho === key
+                          ? 'bg-[#2F2F2F] border-[#2F2F2F] text-white'
+                          : 'bg-white border-[#E5E5E5] text-[#9F9F9F]')
+                  ].join(' ')}
+                  style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontWeight: 400 }}
+                >
+                  {key === 'ALL' ? 'All' : key}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 

@@ -6,6 +6,7 @@ import {
   innovationDescriptionsByName,
   innovationDescriptionsByStudentNumber
 } from './innovation-descriptions';
+import { studentDataByName } from './student-data';
 import { workMediaByStudentNumber } from './work-media';
 
 // 작품 제목 템플릿
@@ -48,8 +49,68 @@ const professors = {
   '융합디자인스튜디오': ['유동관 교수님', '이원제 교수님', '신윤진 교수님', '남정 교수님']
 };
 
+type OverrideDefinition = {
+  name: string;
+  title: string;
+  professor?: string;
+  studentNumber?: string;
+};
+
+type OverrideEntry = {
+  title: string;
+  professor?: string;
+};
+
+type OverrideMap = Record<string, OverrideEntry[]>;
+
+const STUDENT_NUMBER_PATTERN = /^\d{9}$/;
+
+const createOverrideMap = (list: OverrideDefinition[]): OverrideMap => {
+  const map: OverrideMap = {};
+
+  list.forEach((entry) => {
+    const overrideEntry: OverrideEntry = { title: entry.title, professor: entry.professor };
+    const candidates = studentDataByName[entry.name];
+    const resolvedStudentNumber =
+      entry.studentNumber ||
+      (STUDENT_NUMBER_PATTERN.test(entry.name) ? entry.name : undefined) ||
+      (candidates?.length === 1 ? candidates[0].studentNumber : undefined);
+
+    if (resolvedStudentNumber) {
+      const studentOverrides = map[resolvedStudentNumber] || [];
+      studentOverrides.push(overrideEntry);
+      map[resolvedStudentNumber] = studentOverrides;
+    }
+
+    const nameOverrides = map[entry.name] || [];
+    nameOverrides.push(overrideEntry);
+    map[entry.name] = nameOverrides;
+  });
+
+  return map;
+};
+
+const getOverrideForDesigner = (
+  overrides: OverrideMap,
+  designer: Designer,
+  nameSeq: number
+): OverrideEntry | undefined => {
+  const keys: (string | undefined)[] = [designer.student_number, designer.name];
+
+  for (const key of keys) {
+    if (!key) continue;
+    const overrideList = overrides[key];
+    if (!overrideList?.length) continue;
+
+    const index = key === designer.student_number ? 0 : nameSeq;
+    return overrideList[index] ?? overrideList[overrideList.length - 1];
+  }
+
+  return undefined;
+};
+
 // 혁신디자인스튜디오 작품/교수 수동 매핑 (이름 기준, 동명이인은 배열 순서로 매칭)
-const innovationOverridesList: Array<{ name: string; title: string; professor?: string }> = [
+const innovationOverridesList: OverrideDefinition[] = [
   { name: '유환희', title: '거인에게서 살아남기', professor: '김한솔 교수님' },
   { name: '강규리', title: 'Prep: 나만의 AI 발표·면접 트레이너', professor: '서승연 교수님' },
   { name: '강민서', title: '비감정 보고서 : The Non-Affective Files', professor: '손우성 교수님' },
@@ -61,8 +122,8 @@ const innovationOverridesList: Array<{ name: string; title: string; professor?: 
   { name: '김가현', title: 'Hamlet Syndrome', professor: '안혜선 교수님' },
   { name: '김다예', title: '향으로 여는 기억, <프루스트 현상>', professor: '손우성 교수님' },
   { name: '김미연', title: '극락고사: 극락왕생을 위한 당신의 선택', professor: '안혜선 교수님' },
-  { name: '김민지', title: 'MEDINOTE', professor: '서승연 교수님' },
-  { name: '김민지', title: '미래 복원 박물관', professor: '손우성 교수님' },
+  { name: '202120221', title: 'MEDINOTE', professor: '서승연 교수님' },
+  { name: '202120222', title: '미래 복원 박물관', professor: '손우성 교수님' },
   { name: '김서영', title: 'D.E.LAB : 변종된 미래인간 아카이브', professor: '서승연 교수님' },
   { name: '김서진', title: '엉뚱한 데이트코스, 구트 GOOTE', professor: '서승연 교수님' },
   { name: '김세미', title: '나만의 오너먼트 - 패턴의 미학', professor: '안혜선 교수님' },
@@ -113,8 +174,8 @@ const innovationOverridesList: Array<{ name: string; title: string; professor?: 
   { name: '이은솔', title: '매운맛 탐구 프로젝트 : MAPDA', professor: '안혜선 교수님' },
   { name: '이은진', title: '절망의 텍스트', professor: '손우성 교수님' },
   { name: '이정오', title: 'HUMON 도감', professor: '손우성 교수님' },
-  { name: '이지수', title: '세상의 모든 데이', professor: '손우성 교수님' },
-  { name: '이지수', title: '같은상징 다른이야기/ Object Subject', professor: '서승연 교수님' },
+  { name: '202120343', title: '세상의 모든 데이', professor: '손우성 교수님' },
+  { name: '202120344', title: '같은상징 다른이야기/ Object Subject', professor: '서승연 교수님' },
   { name: '이진영', title: 'Brickit', professor: '서승연 교수님' },
   { name: '이채영', title: '편안하지 않은 집', professor: '안혜선 교수님' },
   { name: '이현영', title: '극단적 완곡어법 라이브러리', professor: '안혜선 교수님' },
@@ -134,8 +195,8 @@ const innovationOverridesList: Array<{ name: string; title: string; professor?: 
   { name: '조은희', title: 'Emotion Bin', professor: '안혜선 교수님' },
   { name: '지예린', title: '사투리 교향곡', professor: '김한솔 교수님' },
   { name: '천다영', title: '디지털 21세기 화석 발굴관', professor: '안혜선 교수님' },
-  { name: '최지윤', title: 'PLASTIQUARIUM', professor: '서승연 교수님' },
-  { name: '최지윤', title: 'stick it my day', professor: '김한솔 교수님' },
+  { name: '202020381', title: 'PLASTIQUARIUM', professor: '서승연 교수님' },
+  { name: '202120393', title: 'stick it my day', professor: '김한솔 교수님' },
   { name: '한유진', title: '꼬순내', professor: '안혜선 교수님' },
   { name: '허윤서', title: '사소한 죄의식으로부터의 해방', professor: '김한솔 교수님' },
   { name: '홍남영', title: '그들은 무엇을 두려워 했는가', professor: '안혜선 교수님' },
@@ -148,15 +209,10 @@ const innovationOverridesList: Array<{ name: string; title: string; professor?: 
   { name: '이혁수', title: '반려돌: 감정이 선이 되는 정원', professor: '손우성 교수님' },
 ];
 
-const innovationOverrides: Record<string, { title: string; professor?: string }[]> = innovationOverridesList.reduce((acc, cur) => {
-  const arr = acc[cur.name] || [];
-  arr.push({ title: cur.title, professor: cur.professor });
-  acc[cur.name] = arr;
-  return acc;
-}, {} as Record<string, { title: string; professor?: string }[]>);
+const innovationOverrides = createOverrideMap(innovationOverridesList);
 
 // 융합디자인스튜디오 작품/교수 수동 매핑 (이름 기준, 동명이인은 배열 순서로 매칭)
-const convergenceOverridesList: Array<{ name: string; title: string; professor?: string }> = [
+const convergenceOverridesList: OverrideDefinition[] = [
   { name: '유환희', title: 'Dani’s Magical Garden', professor: '신윤진 교수님' },
   { name: '강규리', title: 'Brompton: Fold & Custom', professor: '이원제 교수님' },
   { name: '강민서', title: 'CUSTOM TEA BRAND : OOTD', professor: '남정 교수님' },
@@ -168,8 +224,8 @@ const convergenceOverridesList: Array<{ name: string; title: string; professor?:
   { name: '김가현', title: '지구에 온 린트', professor: '유동관 교수님' },
   { name: '김다예', title: '깨달음의 길, <SATYA>', professor: '신윤진 교수님' },
   { name: '김미연', title: '향으로 기록하는 지구, Geosent31', professor: '남정 교수님' },
-  { name: '김민지', title: 'CO-HAB', professor: '신윤진 교수님' },
-  { name: '김민지', title: '어 그게... 거시기', professor: '신윤진 교수님' },
+  { name: '202120221', title: 'CO-HAB', professor: '신윤진 교수님' },
+  { name: '202120222', title: '어 그게... 거시기', professor: '신윤진 교수님' },
   { name: '김서영', title: 'MASIGN : 화성 시각언어 안내 시스템', professor: '신윤진 교수님' },
   { name: '김서진', title: '비행', professor: '유동관 교수님' },
   { name: '김세미', title: '바이닐즈 (Vinlyz)', professor: '남정 교수님' },
@@ -220,8 +276,8 @@ const convergenceOverridesList: Array<{ name: string; title: string; professor?:
   { name: '이은솔', title: 'Ramuseum : 전 세계 라면 편의점', professor: '이원제 교수님' },
   { name: '이은진', title: '여명 아래', professor: '유동관 교수님' },
   { name: '이정오', title: 'FORGOTTEN', professor: '이원제 교수님' },
-  { name: '이지수', title: '물결 흐르는', professor: '유동관 교수님' },
-  { name: '이지수', title: '별아의 옷장', professor: '유동관 교수님' },
+  { name: '202120343', title: '물결 흐르는', professor: '유동관 교수님' },
+  { name: '202120344', title: '별아의 옷장', professor: '유동관 교수님' },
   { name: '이진영', title: '프리미엄 조명 브랜드 – Lumine', professor: '이원제 교수님' },
   { name: '이채영', title: 'INWARD', professor: '남정 교수님' },
   { name: '이현영', title: '동네 미용실 디제잉 파티 : 싹둑 레이브', professor: '남정 교수님' },
@@ -241,8 +297,8 @@ const convergenceOverridesList: Array<{ name: string; title: string; professor?:
   { name: '조은희', title: '보이지 않는 두려움', professor: '유동관 교수님' },
   { name: '지예린', title: 'Loopin', professor: '남정 교수님' },
   { name: '천다영', title: '시니어를 위한 덕질 리스트', professor: '남정 교수님' },
-  { name: '최지윤', title: 'SLOWTONE(슬로우톤)', professor: '남정 교수님' },
-  { name: '최지윤', title: 'UGLY DOG CLUB', professor: '남정 교수님' },
+  { name: '202020381', title: 'SLOWTONE(슬로우톤)', professor: '남정 교수님' },
+  { name: '202120393', title: 'UGLY DOG CLUB', professor: '남정 교수님' },
   { name: '한유진', title: '삶은 고양이처럼', professor: '유동관 교수님' },
   { name: '허윤서', title: 'Snove 스노브', professor: '남정 교수님' },
   { name: '홍남영', title: '화성 정착민 감정 기록: Marenfold', professor: '신윤진 교수님' },
@@ -255,19 +311,14 @@ const convergenceOverridesList: Array<{ name: string; title: string; professor?:
   { name: '이혁수', title: 'MOPEZ: Customize Your Ride', professor: '이원제 교수님' },
 ];
 
-const convergenceOverrides: Record<string, { title: string; professor?: string }[]> = convergenceOverridesList.reduce((acc, cur) => {
-  const arr = acc[cur.name] || [];
-  arr.push({ title: cur.title, professor: cur.professor });
-  acc[cur.name] = arr;
-  return acc;
-}, {} as Record<string, { title: string; professor?: string }[]>);
+const convergenceOverrides = createOverrideMap(convergenceOverridesList);
 
 // 작품 데이터 생성 함수
 export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
   const works: Work[] = [];
   let workId = 1;
-  const innovationSeq: Record<string, number> = {};
-  const convergenceSeq: Record<string, number> = {};
+  const innovationNameSeq: Record<string, number> = {};
+  const convergenceNameSeq: Record<string, number> = {};
 
   inputDesigners.forEach((designer) => {
     const categories: StudioKey[] =
@@ -288,24 +339,23 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
       let title = `${titlePrefixes[Math.floor(Math.random() * titlePrefixes.length)]} ${titleSuffixes[Math.floor(Math.random() * titleSuffixes.length)]}`;
       let professor = professors[category][Math.floor(Math.random() * professors[category].length)];
       let description = descriptionTemplates[Math.floor(Math.random() * descriptionTemplates.length)];
+      const studentNumber = designer.student_number;
 
       // 혁신디자인스튜디오 수동 오버라이드 적용
       if (category === '혁신디자인스튜디오') {
-        const seq = innovationSeq[designer.name] || 0;
-        const overrideList = innovationOverrides[designer.name];
-        const override = Array.isArray(overrideList) ? overrideList[seq] : undefined;
+        const nameSeq = innovationNameSeq[designer.name] || 0;
+        const override = getOverrideForDesigner(innovationOverrides, designer, nameSeq);
         if (override) {
           title = override.title;
           if (override.professor) professor = override.professor;
         }
 
         const nameDescriptions = innovationDescriptionsByName[designer.name];
-        const descriptionByName = nameDescriptions?.[seq];
+        const descriptionByName = nameDescriptions?.[nameSeq];
         if (descriptionByName) {
           description = descriptionByName;
         }
 
-        const studentNumber = designer.student_number;
         if (studentNumber) {
           const descriptionOverride = innovationDescriptionsByStudentNumber[studentNumber];
           if (descriptionOverride) {
@@ -313,26 +363,24 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
           }
         }
 
-        innovationSeq[designer.name] = seq + 1;
+        innovationNameSeq[designer.name] = nameSeq + 1;
       }
 
       // 융합디자인스튜디오 수동 오버라이드 적용
       if (category === '융합디자인스튜디오') {
-        const seq = convergenceSeq[designer.name] || 0;
-        const overrideList = convergenceOverrides[designer.name];
-        const override = Array.isArray(overrideList) ? overrideList[seq] : undefined;
+        const nameSeq = convergenceNameSeq[designer.name] || 0;
+        const override = getOverrideForDesigner(convergenceOverrides, designer, nameSeq);
         if (override) {
           title = override.title;
           if (override.professor) professor = override.professor;
         }
 
         const nameDescriptions = convergenceDescriptionsByName[designer.name];
-        const descriptionByName = nameDescriptions?.[seq];
+        const descriptionByName = nameDescriptions?.[nameSeq];
         if (descriptionByName) {
           description = descriptionByName;
         }
 
-        const studentNumber = designer.student_number;
         if (studentNumber) {
           const descriptionOverride = convergenceDescriptionsByStudentNumber[studentNumber];
           if (descriptionOverride) {
@@ -340,10 +388,9 @@ export function generateWorks(inputDesigners: Designer[] = designers): Work[] {
           }
         }
 
-        convergenceSeq[designer.name] = seq + 1;
+        convergenceNameSeq[designer.name] = nameSeq + 1;
       }
       const isInnovation = category === '혁신디자인스튜디오';
-      const studentNumber = designer.student_number;
       const mediaEntry = studentNumber ? workMediaByStudentNumber[studentNumber] : undefined;
       const studioMedia = mediaEntry ? (isInnovation ? mediaEntry.innovation : mediaEntry.convergence) : undefined;
       const providedThumbnail = isInnovation
