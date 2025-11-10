@@ -164,7 +164,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
       usesAI: true,
     },
     convergence: {
-      videos: ['https://youtube.com/shorts/WtG6K-0c8fw'],
+      videos: ['https://youtube.com/shorts/WtG6K-0c8fw?feature=share'],
       prototypes: ['https://www.figma.com/proto/NtgqIZsiyWGjvQOhbYasKj/NEURING?page-id=0%3A1&node-id=1-3&viewport=328%2C70%2C0.18&t=2UJKd8XblzPMLXll-1&scaling=scale-down-width&content-scaling=fixed'],
       usesAI: true,
     },
@@ -711,7 +711,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
       usesAI: true,
     },
     convergence: {
-      videos: ['https://vimeo.com/1134469394/8bfa26b18a?share=copy&fl=sv&fe=ci'],
+      videos: ['https://vimeo.com/1134469394?share=copy&fl=sv&fe=ci'],
       usesAI: true,
     },
   },
