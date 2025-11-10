@@ -30,6 +30,24 @@
     @apply bg-white text-primary-900 antialiased;
     font-family: "rixdongnimgothic-pro", sans-serif;
   }
+
+  html.wf-loading body {
+    opacity: 0;
+  }
+
+  html.wf-active body,
+  html.wf-inactive body {
+    opacity: 1;
+    transition: opacity 0.25s ease;
+  }
+
+  html.wf-loading body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 9999;
+  }
 }
 
 @layer components {
