@@ -198,24 +198,26 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
               <Image src="/images/works/arrow.svg" alt="" width={16} height={16} className="mr-2" />
               <span className="rix-font text-[16px]">뒤로가기</span>
             </Link>
-            <h1 className="pretendard-font text-[26px] font-extrabold text-black leading-snug mb-2">{work.title}</h1>
-            <div className="pretendard-font text-[18px] font-bold text-[#D5B27D] mb-5">
+            <div className="pretendard-font text-[20px] font-bold text-[#D5B27D] mb-10">
               {designer.name}
               {roman ? <span className="ml-2 text-[#D5B27D] font-bold">{roman}</span> : null}
             </div>
+            <div className="pretendard-font text-[14px] font-semibold text-gray-500 tracking-wide uppercase leading-none mb-[2px]">
+              {work.category}
+            </div>
+            <h1 className="pretendard-font text-[26px] font-extrabold text-black leading-snug mb-4">{work.title}</h1>
             <div className="mb-6">
               <p className="work-description pretendard-font text-[18px] font-medium leading-7 text-gray-700">
-              {work.description}
-            </p>
+                {work.description}
+              </p>
               {work.usesAI ? (
                 <p className="pretendard-font text-[14px] text-gray-500 mt-2 font-normal">
                   이 작업은 AI를 사용했습니다.
                 </p>
               ) : null}
             </div>
-            <div className="pretendard-font text-[18px] font-bold text-gray-700">{work.category}</div>
             {prototypes.length ? (
-              <div className="mt-6 border-t border-gray-200 pt-6">
+              <div className="mb-6">
                 <ul className="space-y-2">
                   {prototypes.map((url, idx) => (
                     <li key={`${url}-${idx}`}>
@@ -223,7 +225,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
                         href={url}
                         target="_blank"
                         rel="noreferrer"
-                        className="rix-font inline-flex items-center text-[14px] text-black underline underline-offset-4"
+                        className="rix-font inline-flex items-center text-[14px] text-[#D5B27D] underline underline-offset-4"
                       >
                         {prototypes.length > 1 ? `프로토타입 ${idx + 1} 보기` : '프로토타입 보기'}
                       </a>
