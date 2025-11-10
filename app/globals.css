@@ -17,7 +17,7 @@
   }
 
   * {
-    font-family: "rixdongnimgothic-pro", sans-serif;
+    font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -28,7 +28,8 @@
 
   body {
     @apply bg-white text-primary-900 antialiased;
-    font-family: "rixdongnimgothic-pro", sans-serif;
+    font-family: "rixdongnimgothic-pro", "Noto Sans KR", sans-serif;
+    font-weight: 400;
   }
 
 }
