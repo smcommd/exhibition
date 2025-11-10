@@ -129,6 +129,8 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
     )
   }
   const roman = designer.student_number ? englishNameByStudentNumber[designer.student_number] : undefined
+  const videos = work.videos ?? []
+  const prototypes = work.prototypes ?? []
 
   return (
     <div className="min-h-screen bg-white">
@@ -156,9 +158,9 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
               )}
             </div>
 
-            {work.videos?.length ? (
+            {videos.length ? (
               <div className="space-y-4">
-                {work.videos.map((url, idx) => {
+                {videos.map((url, idx) => {
                   const embedInfo = getVideoEmbedInfo(url)
                   return (
                     <div key={`${url}-${idx}`} className="space-y-2">
@@ -180,7 +182,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
                           rel="noreferrer"
                           className="rix-font inline-flex items-center text-[14px] text-[#D5B27D] underline underline-offset-4"
                         >
-                          {work.videos.length > 1 ? `영상 ${idx + 1} 링크 열기` : '영상 링크 열기'}
+                          {videos.length > 1 ? `영상 ${idx + 1} 링크 열기` : '영상 링크 열기'}
                         </a>
                       ) : null}
                     </div>
@@ -212,10 +214,10 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
               ) : null}
             </div>
             <div className="pretendard-font text-[18px] font-bold text-gray-700">{work.category}</div>
-            {work.prototypes?.length ? (
+            {prototypes.length ? (
               <div className="mt-6 border-t border-gray-200 pt-6">
                 <ul className="space-y-2">
-                  {work.prototypes.map((url, idx) => (
+                  {prototypes.map((url, idx) => (
                     <li key={`${url}-${idx}`}>
                       <a
                         href={url}
@@ -223,7 +225,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
                         rel="noreferrer"
                         className="rix-font inline-flex items-center text-[14px] text-black underline underline-offset-4"
                       >
-                        {work.prototypes.length > 1 ? `프로토타입 ${idx + 1} 보기` : '프로토타입 보기'}
+                        {prototypes.length > 1 ? `프로토타입 ${idx + 1} 보기` : '프로토타입 보기'}
                       </a>
                     </li>
                   ))}

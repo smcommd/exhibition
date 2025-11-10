@@ -115,10 +115,11 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                 <img
                   src="/images/profiles/Group 1073.png"
                   alt="name bracket"
-                  className="h-[120px] w-auto select-none"
+                  className="select-none"
+                  style={{ width: 'min(360px, 90vw)', height: 'auto' }}
                   aria-hidden="true"
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+                <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
                   <span
                     className="leading-tight whitespace-nowrap"
                     style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
@@ -126,15 +127,8 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                     {designer.name}
                   </span>
                   <span
-                    className="text-black leading-tight mx-auto"
-                    style={{
-                      fontFamily: '"rixdongnimgothic-pro", sans-serif',
-                      fontSize: '22px',
-                      fontWeight: 700,
-                      whiteSpace: 'normal',
-                      wordBreak: 'break-word',
-                      maxWidth: '200px',
-                    }}
+                    className="text-black leading-tight whitespace-nowrap"
+                    style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '22px', fontWeight: 700 }}
                   >
                     {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
                   </span>
@@ -164,29 +158,23 @@ export default async function DesignerDetailPage({ params }: DesignerDetailPageP
                   <img
                     src="/images/profiles/Group 1073.png"
                     alt="name bracket"
-                    className="h-[120px] min-[900px]:h-[168px] w-auto select-none"
+                    className="select-none"
+                    style={{ width: 'min(500px, 45vw)', height: 'auto' }}
                     aria-hidden="true"
                   />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-center">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center px-8 text-center">
                     <span
                       className="leading-tight whitespace-nowrap"
                       style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontSize: '33px', fontWeight: 400 }}
                     >
                       {designer.name}
                     </span>
-                  <span
-                    className="text-black leading-tight mx-auto"
-                    style={{
-                      fontFamily: '"rixdongnimgothic-pro", sans-serif',
-                      fontWeight: 400,
-                      fontSize: 'clamp(14px, 2.4vw, 18px)',
-                      whiteSpace: 'normal',
-                      wordBreak: 'break-word',
-                      maxWidth: '220px',
-                    }}
-                  >
-                    {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
-                  </span>
+                    <span
+                      className="text-black leading-tight whitespace-nowrap"
+                      style={{ fontFamily: '"rixdongnimgothic-pro", sans-serif', fontWeight: 400, fontSize: 'clamp(14px, 2.4vw, 18px)' }}
+                    >
+                      {englishNameByStudentNumber[designer.student_number ?? ''] || romanizeKorean(designer.name)}
+                    </span>
                   </div>
                 </div>
               </div>
