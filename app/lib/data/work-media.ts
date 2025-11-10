@@ -321,11 +321,12 @@ export const workMediaByStudentNumber: WorkMediaMap = {
   // 김원경
   '202120235': {
     innovation: {
-      videos: ['https://youtu.be/6snRnVo87dw'],
+      
       prototypes: ['https://www.figma.com/proto/moP62mYx8JbzazXfYiDyvf/%ED%98%81%EC%8B%A0-%EC%B5%9C%EC%A2%85-ppt?page-id=0%3A1&node-id=1-39&viewport=720%2C270%2C0.02&t=611QG06s5wIDL51P-1&scaling=min-zoom&content-scaling=fixed'],
       usesAI: true,
     },
     convergence: {
+      videos: ['https://youtu.be/6snRnVo87dw'],
       usesAI: true,
     },
   },

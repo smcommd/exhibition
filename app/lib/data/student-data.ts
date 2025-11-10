@@ -382,7 +382,7 @@ export const instagramHandlesByName: Record<string, string> = {
   '이서영': '5eo.0o',
   '이승주': 'sj_saeee_910',
   '이예슬': 'o.ceblue',
-  '이유진': 'db_wls8',
+  '이유진': ' j1n22__',
   '이은솔': 'ssool_ee',
   '이은진': '_lee.ej',
   '이정오': '0oooooooooojo_',
