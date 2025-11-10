@@ -462,7 +462,7 @@ export const emailByName: Record<string, string> = {
   '박시온': 'siOff.Office@gmail.com',
   '박정민': 'gimigimi72@naver.com',
   '박준혁': 'junhyeokpark@gmail.com',
-  '박하빈': 'haguma0624@naver.com',
+  '박하빈': 'haguma0624@gmail.com',
   '박하은': 'hayen730@naver.com',
   '박현민': 'phm0237@naver.com',
   '배가온': 'qorkdhs02@naver.com',
