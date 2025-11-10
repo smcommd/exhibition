@@ -2,6 +2,9 @@ const url = process.env.NEXT_PUBLIC_CDN_BASE ? new URL(process.env.NEXT_PUBLIC_C
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    serverComponentsExternalPackages: ['@supabase/supabase-js', '@supabase/realtime-js'],
+  },
   images: {
     domains: ['localhost'],
     remotePatterns: url

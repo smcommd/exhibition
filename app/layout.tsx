@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import GlobalLoadingGate from './components/GlobalLoadingGate'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
@@ -48,7 +47,6 @@ export default function RootLayout({
         }} />
       </head>
       <body className={`${inter.variable} font-sans`}>
-        <GlobalLoadingGate />
         {children}
       </body>
     </html>
