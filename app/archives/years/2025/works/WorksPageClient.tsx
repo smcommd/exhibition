@@ -88,6 +88,10 @@ export default function WorksPageClient({ works, initialStudio }: WorksPageClien
   const pathname = usePathname();
 
   useEffect(() => {
+    setActive(initialStudio);
+  }, [initialStudio]);
+
+  useEffect(() => {
     const desiredQuery = active === "innovation" ? "?studio=innovation" : "";
     const current = typeof window !== "undefined" ? window.location.search : "";
     if (desiredQuery !== current) {
@@ -209,6 +213,3 @@ export default function WorksPageClient({ works, initialStudio }: WorksPageClien
     </div>
   );
 }
-  useEffect(() => {
-    setActive(initialStudio);
-  }, [initialStudio]);
