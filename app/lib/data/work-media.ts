@@ -270,7 +270,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
       usesAI: true,
     },
     convergence: {
-      videos: ['https://youtu.be/JXFysM6UKHk'],
+      videos: ['https://youtu.be/DPGM7ZO_rQg'],
     },
   },
   // 김서영
