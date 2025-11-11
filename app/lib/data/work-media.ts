@@ -492,7 +492,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
       prototypes: ['https://www.figma.com/proto/aQrkAmnjLkCt9FedZmXjf1/%ED%98%81%EC%8B%A0%EB%94%94%EC%9E%90%EC%9D%B8-ppt?node-id=512-746&scaling=scale-down&content-scaling=fixed&t=xsnNGMeP8mfHISJa-1'],
     },
     convergence: {
-      videos: ['https://youtu.be/06S4a-KgCJY'],
+      videos: ['https://youtu.be/OzxH5v6E3OA'],
       usesAI: true,
     },
   },
