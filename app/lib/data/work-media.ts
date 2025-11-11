@@ -653,7 +653,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
       videos: ['https://youtu.be/yXa0b7iL_3o'],
     },
     convergence: {
-      prototypes: ['https://my.readymag.com/edit/5906079/preview/'],
+      prototypes: ['https://readymag.website/u1537188908/5906079/'],
       usesAI: true,
     },
   },
