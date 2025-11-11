@@ -269,7 +269,7 @@ export const englishNameByStudentNumber: Record<string, string> = {
   '202120400': 'Hur Yoonseo',
   '202120402': 'Hong Namyeong',
   '202020399': 'Hong Yuri',
-  '202020402': 'Hwangbo MInjeong',
+  '202020402': 'Hwangbo Minjeong',
   '202121460': 'Park Soojin',
   '202120233': 'Kim Areum',
   '202120401': 'Heo Jayeon',
