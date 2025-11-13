@@ -4,6 +4,7 @@ import type { Work } from '@/app/lib/types'
 import { fetchWorks } from '@/app/lib/services/works'
 import { fetchDesignerById } from '@/app/lib/services/designers'
 import { englishNameByStudentNumber } from '@/app/lib/data/student-data'
+import ScrollToTopOnLoad from '../ScrollToTopOnLoad'
 
 function seededRandom(seed: number): () => number {
   let value = seed % 2147483647
@@ -134,6 +135,7 @@ export default async function WorkDetailPage({ params }: WorkDetailPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      <ScrollToTopOnLoad />
       <div className="container mx-auto px-6 py-10">
         <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-[minmax(0,720px)_minmax(0,1fr)] gap-10">
           {/* Left: main visual */}
