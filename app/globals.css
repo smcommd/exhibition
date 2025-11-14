@@ -73,6 +73,16 @@
     display: block;
   }
 
+  .portrait-kiosk-hero .home-hero-video-wrapper {
+    display: block !important;
+    width: 85%;
+  }
+
+  .portrait-kiosk-hero .home-hero-image {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .footer-desktop,
   .footer-tablet,
   .footer-mobile {
@@ -88,6 +98,17 @@
     }
     .home-hero-video-wrapper {
       display: none;
+    }
+    .portrait-kiosk-hero .home-hero-video-wrapper {
+      display: block !important;
+      position: relative;
+      left: auto;
+      transform: none;
+      width: 100%;
+    }
+    .portrait-kiosk-hero .home-hero-image {
+      opacity: 0;
+      visibility: hidden;
     }
     .home-hero-image {
       margin-top: 0 !important;
