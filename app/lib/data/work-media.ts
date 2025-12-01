@@ -47,7 +47,7 @@ export const workMediaByStudentNumber: WorkMediaMap = {
   // 박준혁
   '202020052': {
     convergence: {
-      prototypes: ['https://www.figma.com/design/3uOcKwW9rkONTz85fFolee/%EC%9C%B5%ED%95%A9-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=0-1&t=sKzExPRj6xA7ypqe-1'],
+      prototypes: ['https://www.figma.com/proto/3uOcKwW9rkONTz85fFolee/%EC%9C%B5%ED%95%A9-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?node-id=1-19792&t=AcTjcTC9jYESiOyW-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A19792'],
       usesAI: true,
     },
   },
